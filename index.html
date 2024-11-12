@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,78 +17,100 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="assets/favicon_pg.jpg">
 </head>
+
 <body class="bg-white text-black">
     <div class="fixed top-0 left-0 right-0 z-50 items-center justify-center py-2 text-sm font-bold text-white transition-transform duration-300"
-    id="starBanner"
-    style="background: linear-gradient(85.52deg, rgba(3, 205, 244) -7.27%, rgba(114, 159, 252) 108.87%); display: flex;">
-    <a href="https://github.com/0xPlaygrounds/rig" target="_blank"
-        rel="noopener noreferrer">⭐️ Support Rig and give it a star on GitHub!</a><button class="absolute right-3" onclick="hideBanner()"><svg width="25" height="25"
-            viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6.49023 6.48926L18.511 18.5101" stroke="white" stroke-width="3"></path>
-            <path d="M6.49023 18.5107L18.511 6.48993" stroke="white" stroke-width="3"></path>
-        </svg></button></div>
+        id="starBanner"
+        style="background: linear-gradient(85.52deg, rgba(3, 205, 244) -7.27%, rgba(114, 159, 252) 108.87%); display: flex;">
+        <a href="https://github.com/0xPlaygrounds/rig" target="_blank" rel="noopener noreferrer">⭐️ Support Rig and give
+            it a star on GitHub!</a><button class="absolute right-3" onclick="hideBanner()"><svg width="25" height="25"
+                viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.49023 6.48926L18.511 18.5101" stroke="white" stroke-width="3"></path>
+                <path d="M6.49023 18.5107L18.511 6.48993" stroke="white" stroke-width="3"></path>
+            </svg></button>
+    </div>
     <nav class="fixed displdidiplssw-full  backdrop-filter backdrop-blur-lg w-full p-4 z-10" style="top: 36px;">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-2xl font-bold">
                 <img src="assets/PG-Logo.png" alt="Rig Logo" class="h-10">
-              </a>
+            </a>
             <div>
                 <a href="#about" class="ml-4 text-white nav-link">About</a>
                 <a href="https://rig.rs" class="ml-4 text-white nav-link">Rig</a>
                 <a href="https://dev.to/0thtachi" class="ml-4 text-white nav-link">Blog</a>
-                <a href="https://github.com/0xPlaygrounds" class="ml-4 text-white nav-link">GitHub</a>
+                <a href="https://github.com/0xPlaygrounds" class="ml-2 text-white nav-link"> <svg class="w-5 h-5 mr-1 inline-block"
+                        fill="white" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                    </svg>GitHub</a>
             </div>
         </div>
     </nav>
 
     <header class="h-screen flex items-center justify-center text-white">
-      <canvas id="headerCanvas" class="absolute top-0 left-0 w-full h-full"></canvas>
-      <div class="text-center relative z-10 px-4 max-w-3xl"> <!-- Added max-width and padding -->
-          <h1 class="mb-4 text-6xl font-bold">Playgrounds</h1>
-          <p class="mb-8 typewriter">Supercharging AI Application Development with Open-Source Tools</p>
-          <div class="flex justify-center space-x-4">
-              <a href="#about" class="btn bg-white text-black hover:bg-gray-200 transition duration-300 pulse">Learn More</a>
-              <a href="https://rig.rs" class="btn bg-accent text-white hover:bg-accent-dark transition duration-300">Lock In</a>
-          </div>
-      </div>
-      <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
-          <div class="mouse"></div>
-      </div>
-  </header>
+        <canvas id="headerCanvas" class="absolute top-0 left-0 w-full h-full"></canvas>
+        <div class="text-center relative z-10 px-4 max-w-3xl"> <!-- Added max-width and padding -->
+            <h1 class="mb-4 text-6xl font-bold">Playgrounds</h1>
+            <p class="mb-8 typewriter">Supercharging AI Application Development with Open-Source Tools</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#about" class="btn bg-white text-black hover:bg-gray-200 transition duration-300 pulse">
+                    Learn More
+                </a>
+                <a href="https://rig.rs" class="btn bg-accent text-white hover:bg-accent-dark transition duration-300">
+                    <img src="assets/rig_dark_square.svg" alt="Rig Icon" class="inline-block w-8 h-7 mr-2">Lock In
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+            <div class="mouse"></div>
+        </div>
+    </header>
 
     <main class="container mx-auto px-4 py-16">
-      <section id="about" class="mb-16 fade-in">
-        <h2 class="text-3xl font-bold mb-4">About Us</h2>
-        <p class="text-lg leading-relaxed">
-            At Playgrounds, our mission is to empower developers with high-performance, open-source tools for building modular and scalable AI applications. Our flagship product, RIG, is a general-purpose LLM framework written in Rust that provides a robust foundation and modular APIs for developing and deploying efficient AI solutions.
-        </p>
-    </section>
+        <section id="about" class="mb-16 fade-in">
+            <h2 class="text-3xl font-bold mb-4">About Us</h2>
+            <p class="text-lg leading-relaxed">
+                At Playgrounds, our mission is to empower developers with high-performance, open-source tools for
+                building modular and scalable AI applications. Our flagship product, RIG, is a general-purpose LLM
+                framework written in Rust that provides a robust foundation and modular APIs for developing and
+                deploying efficient AI solutions.
+            </p>
+        </section>
 
-    <section id="connect" class="mb-16 fade-in bg-white-100 p-8 rounded-lg">
-        <h2 class="text-3xl font-bold mb-4 text-center"></h2>
-        <div class="flex justify-center space-x-8">
-            <a href="https://discord.com/invite/playgrounds" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-blue-600 transition duration-300">
-                <svg class="w-8 h-8" fill="black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
-                </svg>
-            </a>
-            <a href="https://x.com/Playgrounds0x" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-blue-600 transition duration-300">
-                <svg class="w-8 h-8" fill="black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
-                </svg>
-            </a>
-            <a href="https://substack.com/@tachi0x" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-blue-600 transition duration-300">
-                <svg class="w-8 h-8" fill="black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
-                </svg>
-            </a>
-            <a href="https://github.com/0xPlaygrounds/rig" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-blue-600 transition duration-300">
-                <svg class="w-8 h-8" fill="black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-            </a>
-        </div>
-    </section>
-    
+        <section id="connect" class="mb-16 fade-in bg-white-100 p-8 rounded-lg">
+            <h2 class="text-3xl font-bold mb-4 text-center"></h2>
+            <div class="flex justify-center space-x-8">
+                <a href="https://discord.com/invite/playgrounds" target="_blank" rel="noopener noreferrer"
+                    class="text-gray-700 hover:text-blue-600 transition duration-300">
+                    <svg class="w-8 h-8" fill="black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z" />
+                    </svg>
+                </a>
+                <a href="https://x.com/Playgrounds0x" target="_blank" rel="noopener noreferrer"
+                    class="text-gray-700 hover:text-blue-600 transition duration-300">
+                    <svg class="w-8 h-8" fill="black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                    </svg>
+                </a>
+                <a href="https://substack.com/@tachi0x" target="_blank" rel="noopener noreferrer"
+                    class="text-gray-700 hover:text-blue-600 transition duration-300">
+                    <svg class="w-8 h-8" fill="black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z" />
+                    </svg>
+                </a>
+                <a href="https://github.com/0xPlaygrounds/rig" target="_blank" rel="noopener noreferrer"
+                    class="text-gray-700 hover:text-blue-600 transition duration-300">
+                    <svg class="w-8 h-8" fill="black" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+
     </main>
 
     <footer class="py-8">
@@ -99,4 +122,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
