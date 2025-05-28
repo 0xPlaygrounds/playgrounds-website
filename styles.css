@@ -271,6 +271,19 @@ footer {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Small button variant */
+.btn-sm {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+  min-width: auto;
+}
+
 /* Code demo container */
 .code-demo-container {
   display: grid;
@@ -362,9 +375,6 @@ footer {
   border-left: 4px solid black;
 }
 
-
-
-
 /* Responsive design */
 @media (max-width: 768px) {
   header h1 {
@@ -401,4 +411,60 @@ footer {
 a:focus, button:focus {
   outline: 2px solid var(--accent-color);
   outline-offset: 2px;
+}
+
+/* Product Cards */
+.product-card {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(135, 206, 250, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.product-card:hover::before {
+  left: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color) !important;
+}
+
+.product-card h3 {
+  color: var(--primary-color);
+}
+
+.product-card .btn-sm {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 600;
+}
+
+/* Improved grid layout for products */
+@media (max-width: 768px) {
+  .product-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 640px) {
+  .product-card .flex {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .product-card .btn-sm {
+    width: 100%;
+    text-align: center;
+  }
 }
