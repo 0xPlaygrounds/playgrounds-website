@@ -32,11 +32,11 @@
     <nav class="fixed displdidiplssw-full  backdrop-filter backdrop-blur-lg w-full p-4 z-10" style="top: 36px;">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-2xl font-bold">
-                <img src="assets/PG-Logo.png" alt="Rig Logo" class="h-10">
+                <img src="assets/PG-Logo.png" alt="Playgrounds Logo" class="h-10">
             </a>
             <div>
                 <a href="#about" class="ml-4 text-white nav-link">About</a>
-                <a href="https://rig.rs" class="ml-4 text-white nav-link">Rig</a>
+                <a href="#products" class="ml-4 text-white nav-link">Products</a>
                 <a href="https://dev.to/0thtachi" class="ml-4 text-white nav-link">Blog</a>
                 <a href="https://github.com/0xPlaygrounds" class="ml-2 text-white nav-link"> <svg class="w-5 h-5 mr-1 inline-block"
                         fill="white" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
@@ -49,15 +49,15 @@
 
     <header class="h-screen flex items-center justify-center text-white">
         <canvas id="headerCanvas" class="absolute top-0 left-0 w-full h-full"></canvas>
-        <div class="text-center relative z-10 px-4 max-w-3xl"> <!-- Added max-width and padding -->
+        <div class="text-center relative z-10 px-4 max-w-4xl">
             <h1 class="mb-4 text-6xl font-bold">Playgrounds</h1>
-            <p class="mb-8 typewriter">Supercharging AI Application Development with Open-Source Tools</p>
-            <div class="flex justify-center space-x-4">
-                <a href="#about" class="btn bg-white text-black hover:bg-gray-200 transition duration-300 pulse">
-                    Learn More
+            <p class="mb-8 typewriter">Building the Future of AI Development with Open-Source Innovation</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#products" class="btn bg-white text-black hover:bg-gray-200 transition duration-300 pulse">
+                    Explore Products
                 </a>
                 <a href="https://rig.rs" class="btn bg-accent text-white hover:bg-accent-dark transition duration-300">
-                    <img src="assets/rig_dark_square.svg" alt="Rig Icon" class="inline-block w-8 h-7 mr-2">Lock In
+                    <img src="assets/rig_dark_square.svg" alt="Rig Icon" class="inline-block w-8 h-7 mr-2">Get Started with Rig
                 </a>
             </div>
         </div>
@@ -66,19 +66,129 @@
         </div>
     </header>
 
-    <main class="container mx-auto px-4 py-16">
-        <section id="about" class="mb-16 fade-in">
-            <h2 class="text-3xl font-bold mb-4">About Us</h2>
-            <p class="text-lg leading-relaxed">
-                At Playgrounds, our mission is to empower developers with high-performance, open-source tools for
-                building modular and scalable AI applications. Our flagship product, RIG, is a general-purpose LLM
-                framework written in Rust that provides a robust foundation and modular APIs for developing and
-                deploying efficient AI solutions.
+    <main class="container mx-auto px-4 py-16" id="main">
+        <section id="about" class="mb-20 fade-in">
+            <h2 class="text-4xl font-bold mb-6 text-center">About Playgrounds</h2>
+            <p class="text-lg leading-relaxed text-center max-w-3xl mx-auto">
+                At Playgrounds, we're on a mission to democratize AI development through powerful, open-source tools. 
+                Our ecosystem spans from low-level frameworks to user-facing applications, empowering developers and 
+                organizations to build the next generation of AI-powered solutions.
             </p>
         </section>
 
-        <section id="connect" class="mb-16 fade-in bg-white-100 p-8 rounded-lg">
-            <h2 class="text-3xl font-bold mb-4 text-center"></h2>
+        <section id="products" class="mb-20 fade-in">
+            <h2 class="text-4xl font-bold mb-12 text-center">Our Products</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Rig Product Card -->
+                <div class="product-card bg-white border-2 border-gray-200 rounded-lg p-8 hover:shadow-xl transition-all duration-300 hover:border-accent-color">
+                    <div class="flex items-center mb-4">
+                        <img src="assets/rig_dark_square.svg" alt="Rig Logo" class="w-12 h-12 mr-4">
+                        <h3 class="text-2xl font-bold">Rig</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Open-source Rust LLM framework providing high-performance, modular APIs for building 
+                        scalable AI applications with type safety and lightning-fast execution.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-700">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                            Rust-powered performance
+                        </div>
+                        <div class="flex items-center text-sm text-gray-700">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                            Modular architecture
+                        </div>
+                        <div class="flex items-center text-sm text-gray-700">
+                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                            Enterprise-ready
+                        </div>
+                    </div>
+                    <div class="flex space-x-3">
+                        <a href="https://rig.rs" class="btn-sm bg-black text-white hover:bg-gray-800 transition duration-300">
+                            Documentation
+                        </a>
+                        <a href="https://github.com/0xPlaygrounds/rig" class="btn-sm border border-gray-300 text-gray-700 hover:bg-gray-50 transition duration-300">
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Arc Product Card -->
+                <div class="product-card bg-white border-2 border-gray-200 rounded-lg p-8 hover:shadow-xl transition-all duration-300 hover:border-accent-color">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 mr-4 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">A</span>
+                        </div>
+                        <h3 class="text-2xl font-bold">Arc</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        AI Rig Complex - A thriving community ecosystem fostering partnerships, side projects, 
+                        and collaborative innovation built around the Rig framework.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-700">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                            Community-driven
+                        </div>
+                        <div class="flex items-center text-sm text-gray-700">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                            Partner ecosystem
+                        </div>
+                        <div class="flex items-center text-sm text-gray-700">
+                            <span class="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
+                            Open collaboration
+                        </div>
+                    </div>
+                    <div class="flex space-x-3">
+                        <a href="https://discord.com/invite/playgrounds" class="btn-sm bg-black text-white hover:bg-gray-800 transition duration-300">
+                            Join Community
+                        </a>
+                        <a href="#" class="btn-sm border border-gray-300 text-gray-700 hover:bg-gray-50 transition duration-300">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ryzome Product Card -->
+                <div class="product-card bg-white border-2 border-gray-200 rounded-lg p-8 hover:shadow-xl transition-all duration-300 hover:border-accent-color">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 mr-4 bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">R</span>
+                        </div>
+                        <h3 class="text-2xl font-bold">Ryzome</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        AI-powered workspace platform that transforms how teams collaborate, create, and innovate. 
+                        The user-facing product that brings AI capabilities to everyday workflows.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-700">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                            AI-powered workflows
+                        </div>
+                        <div class="flex items-center text-sm text-gray-700">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                            Team collaboration
+                        </div>
+                        <div class="flex items-center text-sm text-gray-700">
+                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                            Intuitive interface
+                        </div>
+                    </div>
+                    <div class="flex space-x-3">
+                        <a href="#" class="btn-sm bg-black text-white hover:bg-gray-800 transition duration-300">
+                            Early Access
+                        </a>
+                        <a href="#" class="btn-sm border border-gray-300 text-gray-700 hover:bg-gray-50 transition duration-300">
+                            Waitlist
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="connect" class="mb-16 fade-in bg-gray-50 p-8 rounded-lg">
+            <h2 class="text-3xl font-bold mb-8 text-center">Connect with Us</h2>
             <div class="flex justify-center space-x-8">
                 <a href="https://discord.com/invite/playgrounds" target="_blank" rel="noopener noreferrer"
                     class="text-gray-700 hover:text-blue-600 transition duration-300">
