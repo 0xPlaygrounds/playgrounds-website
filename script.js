@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Typing effect for header text
     const headerText = document.querySelector('header p.typewriter');
-    const text = "Empowering AI Developers with Open-Source Tools";
+    const text = "Building the Future of AI Development with Open-Source Innovation";
     headerText.textContent = ''; // Clear the existing text
     let i = 0;
 
@@ -133,29 +133,44 @@ document.addEventListener('DOMContentLoaded', () => {
     init();
     animate();
 
-    // Run demo for multiple demo blocks
+    // Product card hover effects
+    const productCards = document.querySelectorAll('.product-card');
+    productCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-8px)';
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0)';
+        });
+    });
+
+    // Run demo for multiple demo blocks (if they exist)
     const runDemo = (demoNumber) => {
         const outputElement = document.getElementById(`demoOutput${demoNumber}`);
-        outputElement.innerHTML = 'Running demo...';
+        if (outputElement) {
+            outputElement.innerHTML = 'Running demo...';
 
-        setTimeout(() => {
-            outputElement.innerHTML = `Translation: ${
-                demoNumber === 1
-                    ? 'Bonjour, le monde!'
-                    : demoNumber === 2
-                    ? 'Hello, world!'
-                    : 'Hello, world!'
-            }`;
-        }, 2000);
+            setTimeout(() => {
+                outputElement.innerHTML = `Translation: ${
+                    demoNumber === 1
+                        ? 'Bonjour, le monde!'
+                        : demoNumber === 2
+                        ? 'Hello, world!'
+                        : 'Hello, world!'
+                }`;
+            }, 2000);
+        }
     };
 
-    // Attach event listeners to Run Demo buttons
+    // Attach event listeners to Run Demo buttons (if they exist)
     document.querySelectorAll('.run-demo-btn').forEach((button, index) => {
         button.addEventListener('click', () => runDemo(index + 1));
     });
 
-    // Syntax highlighting for code
-    hljs.highlightAll();
+    // Syntax highlighting for code (if highlight.js is loaded)
+    if (typeof hljs !== 'undefined') {
+        hljs.highlightAll();
+    }
 
     // Accessibility: Skip to main content
     const skipLink = document.createElement('a');
@@ -163,4 +178,11 @@ document.addEventListener('DOMContentLoaded', () => {
     skipLink.className = 'sr-only focus:not-sr-only';
     skipLink.textContent = 'Skip to main content';
     document.body.insertBefore(skipLink, document.body.firstChild);
+
+    // Handle window resize for canvas
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        init();
+    });
 });
