@@ -456,6 +456,131 @@ a:focus, button:focus {
   }
 }
 
+/* Team member styles */
+.team-member {
+  transition: all 0.4s ease;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.team-member:hover {
+  transform: translateY(-7px) scale(1.01);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+}
+
+.team-member > div:first-child {
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.team-member:hover > div:first-child {
+  box-shadow: 0 8px 18px -3px rgba(0, 0, 0, 0.15);
+  transform: scale(1.025);
+}
+/* Image hover effect */
+.team-member img {
+  transition: all 0.4s ease;
+  filter: grayscale(20%);
+}
+
+.team-member:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+/* X profile hover effect */
+.team-member a:hover img {
+  filter: blur(3px) grayscale(0%);
+}
+
+.team-member a {
+  position: relative;
+}
+
+.team-member a::after {
+  content: '';
+  position: absolute;
+  top: 48px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.team-member a:hover::after {
+  opacity: 1;
+}
+
+/* Make sure text doesn't interfere with icon positioning */
+.team-member a:hover h4,
+.team-member a:hover p {
+  position: relative;
+  z-index: 5;
+}
+
+/* Gradient border animation on hover */
+.team-member > div:first-child::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, 
+    var(--accent-color), 
+    #667eea, 
+    #764ba2, 
+    var(--accent-color));
+  border-radius: 50%;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.4s ease;
+}
+
+.team-member:hover > div:first-child::before {
+  opacity: 0.7;
+  animation: rotateGradient 3s linear infinite;
+}
+
+@keyframes rotateGradient {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Text animations */
+.team-member h4 {
+  transition: color 0.3s ease;
+}
+
+.team-member:hover h4 {
+  color: var(--accent-dark);
+}
+
+.team-member p {
+  transition: all 0.3s ease;
+}
+
+.team-member:hover p {
+  transform: translateY(-2px);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Additional mobile optimizations */
 @media (max-width: 640px) {
   .product-card .flex {
