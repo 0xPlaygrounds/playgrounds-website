@@ -176,7 +176,7 @@ footer {
   margin: 0 auto;
   letter-spacing: .15em;
   animation: 
-    typing 3.5s steps(40, end),
+    typing 3.5s steps(70, end),
     blink-caret .75s step-end infinite;
   max-width: 100%;
   display: inline-block;
@@ -418,6 +418,17 @@ a:focus, button:focus {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-card > *:last-child {
+  margin-top: auto;
+}
+
+.product-card .space-y-3 {
+  flex-grow: 1;
 }
 
 .product-card::before {
