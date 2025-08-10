@@ -1,0 +1,51 @@
+/* [project]/src/app/neuehaas_3125b0e9.module.css [app-client] (css) */
+@font-face {
+  font-family: neueHaas;
+  src: url("../media/NeueHaasDisplayBlack-s.p.1e606080.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: neueHaas;
+  src: url("../media/NeueHaasDisplayBold-s.p.f3d243d5.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: neueHaas;
+  src: url("../media/NeueHaasDisplayMedium-s.p.8e814b2a.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: neueHaas;
+  src: url("../media/NeueHaasDisplayRoman-s.p.fa639891.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: neueHaas Fallback;
+  src: local(Arial);
+  ascent-override: 87.46%;
+  descent-override: 19.46%;
+  line-gap-override: 21.38%;
+  size-adjust: 93.53%;
+}
+
+.neuehaas_3125b0e9-module__q5W5UW__className {
+  font-family: neueHaas, neueHaas Fallback;
+}
+
+.neuehaas_3125b0e9-module__q5W5UW__variable {
+  --font-neue-haas: "neueHaas", "neueHaas Fallback";
+}
+
+/*# sourceMappingURL=src_app_neuehaas_3125b0e9_module_css_e59ae46c._.single.css.map*/
