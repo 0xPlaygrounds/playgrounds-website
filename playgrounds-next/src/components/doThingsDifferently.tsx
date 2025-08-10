@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from "react"
+import Image from "next/image"
 import { PlusIcon } from "./icons/plusIcon"
 
 const items = [
@@ -8,16 +9,19 @@ const items = [
     title: "Democratizing AI for Everyone",
     description:
       "We're on a mission to democratize AI with powerful open-source tools, from low-level frameworks to user-facing apps .",
+    image: "/assets/features/feature1.webp"
   },
   {
     title: "Do it your way.",
     description:
       "We're on a mission to democratize AI with powerful open-source tools, from low-level frameworks to user-facing apps .",
+    image: "/assets/features/feature1.webp"
   },
   {
     title: "Premium technology, in an easy format.",
     description:
       "We're on a mission to democratize AI with powerful open-source tools, from low-level frameworks to user-facing apps .",
+    image: "/assets/features/feature1.webp"
   },
 ]
 
@@ -28,22 +32,23 @@ export const DoThingsDifferently = () => {
     setOpenIndex((prev) => (prev === index ? null : index))
   }
 
+  const currentIndex = openIndex ?? 0
+
   return (
     <div className="flex w-full flex-col gap-y-[80px] px-4 py-32 md:py-[112px] md:px-[112px] text-white">
       <div className="flex flex-col max-w-[1216px] w-full items-center justify-center mx-auto">
         <div className="flex flex-col text-[28px] md:text-[52px] items-center text-center">
           <span>
-            {" "}
             We do things a bit <span className="italic font-ivypresto">differently</span>.
           </span>
           <span className="text-[18px] text-[#D4D4D4] mt-4">
-            {" "}
             Create powerful AI workflows that solve real problems in minutes, not days.
           </span>
         </div>
       </div>
-      <div className="w-full justify-between flex flex-col md:flex-row gap-y-6 gap-x-16 items-center max-w-[1216px] mx-auto">
-        <div className="flex flex-col flex-1 order-1 md:order-0">
+
+      <div className="w-full justify-between flex flex-col md:flex-row gap-y-6 gap-x-16 items-start md:items-center max-w-[1216px] mx-auto">
+        <div className="flex flex-col flex-1 order-1 md:order-0 w-full">
           {items.map((item, index) => (
             <div
               key={index}
@@ -60,7 +65,7 @@ export const DoThingsDifferently = () => {
                     e.stopPropagation()
                     toggleItem(index)
                   }}
-                  className={`flex items-center gap-x-2 text-[13px] font-medium flex-shrink-0 transition-opacity duration-300 ${openIndex !== index ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+                  className={`flex items-center gap-x-2 text-[13px] font-medium flex-shrink-0 transition-opacity duration-300 ${openIndex !== index ? "opacity-100 cursor-pointer" : "opacity-0 pointer-events-none"}`}
                 >
                   <PlusIcon /> 
                   Read more
@@ -76,7 +81,16 @@ export const DoThingsDifferently = () => {
             </div>
           ))}
         </div>
-        <div className="order-0 md:order-1 rounded-lg flex border border-[#343435] bg-[url('/assets/different-bg.webp')] bg-cover bg-center bg-no-repeat w-full h-[300px] md:w-[576px] md:h-[576px] flex-shrink-0"></div>
+
+        <div className="order-0 md:order-1 py-8 relative rounded-lg flex items-center justify-center border border-[#343435] bg-[url('/assets/different-bg.webp')] bg-cover bg-center bg-no-repeat w-full h-[300px] md:w-[576px] md:h-[576px] flex-shrink-0">
+          <Image
+            src={items[currentIndex].image}
+            alt={items[currentIndex].title}
+            width={85}
+            height={424}
+            className="max-w-full max-h-full object-contain"
+          />
+        </div>
       </div>
     </div>
   )

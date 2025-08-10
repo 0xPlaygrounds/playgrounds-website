@@ -39,7 +39,7 @@ const TeamMemberCard = ({ name, title, image }: TeamMember) => {
 
 export const MeetTeam = () => {
     return (
-        <div className="flex flex-col gap-y-[80px]">
+        <div className="flex flex-col gap-y-[80px] pt-32 bg-gradient-to-b from-[#0A0A0A] from-65% to-[#16161A]">
             <div className="flex text-[28px] md:text-[52px] text-center flex-col px-4 md:px-[112px]">
                 <span>
                     Meet the team behind the <span className="italic font-ivypresto">magic</span>.
@@ -49,13 +49,12 @@ export const MeetTeam = () => {
                 </span>
             </div>
             <div className="w-full overflow-x-auto">
-                <div className="flex gap-x-6 flex-nowrap max-w-fit mx-auto px-4 md:px-[112px] pb-4">
+                <div className="flex gap-x-4 flex-nowrap max-w-fit mx-auto px-4 md:px-[112px] pb-[112px]">
                     {team.map((member, i) => (
-                        <TeamMemberCard key={i} {...member} />
+                        <TeamMemberCard key={i} title={member.title} image={member.image} name={member.name} />
                     ))}
                 </div>
             </div>
-
         </div>
     )
 }
