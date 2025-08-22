@@ -9,7 +9,7 @@ export const ProductAnimation = () => {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full md:h-screen object-cover z-0"
+        className="absolute inset-0 w-full h-full md:h-screen object-cover z-0 translate-y-4 lg:-translate-y-6 xl:translate-y-0 2xl:translate-y-0"
       />
       <div className="pointer-events-none absolute top-0 left-0 w-full h-8 bg-gradient-to-b from-[#010101] to-transparent z-10" />
       <Image
