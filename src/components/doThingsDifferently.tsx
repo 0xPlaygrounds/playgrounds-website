@@ -9,27 +9,35 @@ const items = [
     title: "Democratizing AI for Everyone",
     description:
       "We're on a mission to democratize AI with powerful open-source tools, from low-level frameworks to user-facing apps .",
-    image: "/assets/features/feature1.webp"
+    image: "/assets/features/feature0.webp",
+    imageWidth: 220
   },
   {
     title: "Do it your way.",
     description:
       "We're on a mission to democratize AI with powerful open-source tools, from low-level frameworks to user-facing apps .",
-    image: "/assets/features/feature1.webp"
+    image: "/assets/features/feature1.webp",
+    imageWidth: 85
   },
   {
     title: "Premium technology, in an easy format.",
     description:
       "We're on a mission to democratize AI with powerful open-source tools, from low-level frameworks to user-facing apps .",
-    image: "/assets/features/feature1.webp"
+    image: "/assets/features/feature2.webp",
+    imageWidth: 250
   },
 ]
 
 export const DoThingsDifferently = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
+  const [imageOpacity, setImageOpacity] = useState(1)
 
   const toggleItem = (index: number) => {
-    setOpenIndex((prev) => (prev === index ? null : index))
+    setImageOpacity(0)
+    setTimeout(() => {
+      setOpenIndex((prev) => (prev === index ? null : index))
+      setImageOpacity(1)
+    }, 150)
   }
 
   const currentIndex = openIndex ?? 0
@@ -82,13 +90,23 @@ export const DoThingsDifferently = () => {
           ))}
         </div>
 
-        <div className="order-0 md:order-1 py-8 relative rounded-lg flex items-center justify-center border border-[#343435] bg-[url('/assets/different-bg.webp')] bg-cover bg-center bg-no-repeat w-full h-[300px] md:w-[576px] md:h-[576px] flex-shrink-0">
+        <div className="order-0 md:order-1 py-8 relative rounded-lg flex items-center justify-center border border-[#343435] w-full h-[300px] md:w-[576px] md:h-[576px] flex-shrink-0 overflow-hidden">
+          <video 
+            src="/assets/videoanimation.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover z-0"
+          />
           <Image
             src={items[currentIndex].image}
             alt={items[currentIndex].title}
-            width={85}
+            width={items[currentIndex].imageWidth}
             height={424}
-            className="max-w-full max-h-full object-contain"
+            className="max-w-full max-h-full object-contain relative z-10 transition-opacity duration-300 ease-in-out"
+            style={{ opacity: imageOpacity }}
+            priority
           />
         </div>
       </div>

@@ -240,19 +240,33 @@ const DoThingsDifferently = ()=>{
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "order-0 md:order-1 py-8 relative rounded-lg flex items-center justify-center border border-[#343435] bg-[url('/assets/different-bg.webp')] bg-cover bg-center bg-no-repeat w-full h-[300px] md:w-[576px] md:h-[576px] flex-shrink-0",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                            src: items[currentIndex].image,
-                            alt: items[currentIndex].title,
-                            width: 85,
-                            height: 424,
-                            className: "max-w-full max-h-full object-contain"
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/doThingsDifferently.tsx",
-                            lineNumber: 86,
-                            columnNumber: 11
-                        }, ("TURBOPACK compile-time value", void 0))
-                    }, void 0, false, {
+                        className: "order-0 md:order-1 py-8 relative rounded-lg flex items-center justify-center border border-[#343435] w-full h-[300px] md:w-[576px] md:h-[576px] flex-shrink-0 overflow-hidden",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
+                                src: "/assets/videoanimation.mp4",
+                                autoPlay: true,
+                                loop: true,
+                                muted: true,
+                                playsInline: true,
+                                className: "absolute inset-0 w-full h-full object-cover z-0"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/doThingsDifferently.tsx",
+                                lineNumber: 86,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                src: items[currentIndex].image,
+                                alt: items[currentIndex].title,
+                                width: 85,
+                                height: 424,
+                                className: "max-w-full max-h-full object-contain relative z-10"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/doThingsDifferently.tsx",
+                                lineNumber: 94,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/src/components/doThingsDifferently.tsx",
                         lineNumber: 85,
                         columnNumber: 9

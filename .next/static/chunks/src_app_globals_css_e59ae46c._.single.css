@@ -492,6 +492,10 @@
     left: calc(var(--spacing) * 4);
   }
 
+  .z-0 {
+    z-index: 0;
+  }
+
   .z-10 {
     z-index: 10;
   }
@@ -519,6 +523,10 @@
 
   .-mr-4 {
     margin-right: calc(var(--spacing) * -4);
+  }
+
+  .mr-4 {
+    margin-right: calc(var(--spacing) * 4);
   }
 
   .contents {
@@ -750,13 +758,13 @@
     background-color: var(--color-black);
   }
 
-  .bg-black\/50 {
-    background-color: rgba(0, 0, 0, .5);
+  .bg-black\/20 {
+    background-color: rgba(0, 0, 0, .2);
   }
 
   @supports (color: color-mix(in lab, red, red)) {
-    .bg-black\/50 {
-      background-color: color-mix(in oklab, var(--color-black) 50%, transparent);
+    .bg-black\/20 {
+      background-color: color-mix(in oklab, var(--color-black) 20%, transparent);
     }
   }
 
@@ -776,14 +784,6 @@
   .bg-gradient-to-r {
     --tw-gradient-position: to right in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
-  }
-
-  .bg-\[url\(\'\/assets\/different-bg\.webp\'\)\] {
-    background-image: url("/assets/different-bg.webp");
-  }
-
-  .bg-\[url\(\'\/assets\/videoanimation\.webp\'\)\] {
-    background-image: url("/assets/videoanimation.webp");
   }
 
   .from-\[\#0A0A0A\] {
@@ -814,18 +814,6 @@
   .to-transparent {
     --tw-gradient-to: transparent;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-
-  .bg-cover {
-    background-size: cover;
-  }
-
-  .bg-center {
-    background-position: center;
-  }
-
-  .bg-no-repeat {
-    background-repeat: no-repeat;
   }
 
   .object-contain {
@@ -1001,6 +989,16 @@
     color: var(--color-white);
   }
 
+  .text-white\/80 {
+    color: rgba(255, 255, 255, .8);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .text-white\/80 {
+      color: color-mix(in oklab, var(--color-white) 80%, transparent);
+    }
+  }
+
   .uppercase {
     text-transform: uppercase;
   }
@@ -1117,6 +1115,37 @@
     .group-hover\:grayscale-0:is(:where(.group):hover *) {
       --tw-grayscale: grayscale(0%);
       filter: var(--tw-blur, ) var(--tw-brightness, ) var(--tw-contrast, ) var(--tw-grayscale, ) var(--tw-hue-rotate, ) var(--tw-invert, ) var(--tw-saturate, ) var(--tw-sepia, ) var(--tw-drop-shadow, );
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:border-white\/50:hover {
+      border-color: rgba(255, 255, 255, .5);
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:border-white\/50:hover {
+        border-color: color-mix(in oklab, var(--color-white) 50%, transparent);
+      }
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:bg-white\/80:hover {
+      background-color: rgba(255, 255, 255, .8);
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-white\/80:hover {
+        background-color: color-mix(in oklab, var(--color-white) 80%, transparent);
+      }
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:underline:hover {
+      -webkit-text-decoration-line: underline;
+      text-decoration-line: underline;
     }
   }
 
@@ -1314,6 +1343,12 @@
   @media (min-width: 48rem) {
     .md\:pt-\[112px\] {
       padding-top: 112px;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:pr-\[112px\] {
+      padding-right: 112px;
     }
   }
 

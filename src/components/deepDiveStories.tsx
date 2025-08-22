@@ -68,7 +68,7 @@ export const DeepDiveStories = () => {
                 </div>
             </div>
             
-            <div className="w-fit px-4 h-8 bg-white rounded-lg text-black text-[13px] items-center justify-center font-medium flex">
+            <div className="w-fit px-4 h-8 bg-white rounded-lg cursor-pointer hover:bg-white/80 text-black text-[13px] items-center justify-center font-medium flex transition duration-300 ease-in-out">
                 View all article
             </div>
         </div>

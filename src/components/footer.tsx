@@ -20,7 +20,9 @@ export const Footer = () => {
                                 <div className="md:hidden flex flex-col gap-y-4">
                                     <span className="uppercase text-[#D4D4D4]">contact</span>
                                     <div className="flex flex-col gap-y-4">
-                                        <span>info@playgrounds.com</span>
+                                        <a href="mailto:info@playgrounds.com" className="hover:underline">
+                                            info@playgrounds.com
+                                        </a>
                                     </div>
                                 </div>
                                 <div className="flex md:hidden flex-col gap-y-4">
@@ -41,7 +43,6 @@ export const Footer = () => {
                             className="flex"
                         />
                         <div className="flex md:hidden gap-x-6 font-light text-[16px] items-center">
-                            <span>Privacy Policy</span>
                             <span>© {currentYear} Playgrounds</span>
                         </div>
                     </div>
@@ -51,7 +52,9 @@ export const Footer = () => {
                             <div className="flex-col flex gap-y-6">
                                 <span className="uppercase text-[#D4D4D4]">contact</span>
                                 <div className="flex flex-col gap-y-4">
-                                    <span>info@playgrounds.com</span>
+                                    <a href="mailto:info@playgrounds.com" className="hover:underline">
+                                        info@playgrounds.com
+                                    </a>
                                 </div>
                             </div>
                             <span className="font-light flex text-[14px]">© {currentYear} Playgrounds</span>
@@ -61,12 +64,13 @@ export const Footer = () => {
                             <div className="flex flex-col flex gap-y-6">
                                 <span className="uppercase text-[#D4D4D4]">follow us</span>
                                 <div className="flex flex-col gap-y-4">
-                                    <span>Instagram</span>
-                                    <span>Youtube</span>
-                                    <span>X</span>
+                                    <a href="https://github.com/0xPlaygrounds" target="_blank" className="hover:underline">
+                                        Github
+                                    </a>
+                                    <a href="https://www.youtube.com/@arcdotfun" target="_blank" className="hover:underline">Youtube</a>
+                                    <a href="https://x.com/Playgrounds0x" target="_blank" className="hover:underline">X</a>
                                 </div>
                             </div>
-                            <span className="font-light flex text-[14px]">Privacy Policy</span>
                         </div>
                     </div>
                 </div>

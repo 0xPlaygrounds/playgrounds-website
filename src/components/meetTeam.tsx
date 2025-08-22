@@ -7,16 +7,15 @@ type TeamMember = {
 }
 
 const team: TeamMember[] = [
-    { name: "Alice Johnson", title: "CTO", image: "/assets/team/member_placeholder.webp" },
-    { name: "Michael Brown", title: "CFO", image: "/assets/team/member_placeholder.webp" },
-    { name: "Sophia Miller", title: "Product Manager", image: "/assets/team/member_placeholder.webp" },
-    { name: "James Taylor", title: "Lead Developer", image: "/assets/team/member_placeholder.webp" },
-    { name: "Emily White", title: "UX Designer", image: "/assets/team/member_placeholder.webp" },
-    { name: "Daniel Green", title: "Marketing Lead", image: "/assets/team/member_placeholder.webp" },
-    { name: "Olivia Black", title: "HR Manager", image: "/assets/team/member_placeholder.webp" },
-    { name: "William King", title: "Sales Director", image: "/assets/team/member_placeholder.webp" },
-    { name: "Ava Scott", title: "Data Scientist", image: "/assets/team/member_placeholder.webp" },
-    { name: "Ava Scott", title: "Data Scientist", image: "/assets/team/member_placeholder.webp" },
+    { name: "Tachi", title: "CEO", image: "/assets/team/tachi.webp" },
+    { name: "Thierry", title: "CPO", image: "/assets/team/thierry.webp" },
+    { name: "Stopher", title: "CTO", image: "/assets/team/stopher.webp" },
+    { name: "Garance", title: "Lead Developer", image: "/assets/team/garance.webp" },
+    { name: "Mateo", title: "Product Manager", image: "/assets/team/mateo.webp" },
+    { name: "Mochan", title: "Rust Engineer", image: "/assets/team/mochan.webp" },
+    { name: "Josh", title: "Devrel Engineer", image: "/assets/team/josh.webp" },
+    { name: "Natasha", title: "Marketing Director", image: "/assets/team/natasha.webp" },
+    { name: "Mateusz", title: "Design Engineer", image: "/assets/team/mateusz.webp" },
 ]
 
 const TeamMemberCard = ({ name, title, image }: TeamMember) => {
@@ -31,7 +30,7 @@ const TeamMemberCard = ({ name, title, image }: TeamMember) => {
             />
             <div className="absolute bottom-4 left-4 flex flex-col">
                 <span className="text-white">{name}</span>
-                <span className="uppercase text-[#818181]">{title}</span>
+                <span className="uppercase text-white/80">{title}</span>
             </div>
         </div>
     )
@@ -48,10 +47,12 @@ export const MeetTeam = () => {
                     A dedicated team, constantly improving what we have to offer.
                 </span>
             </div>
-            <div className="w-full overflow-x-auto">
+            <div className="w-full overflow-x-auto mr-4">
                 <div className="flex gap-x-4 flex-nowrap max-w-fit mx-auto px-4 md:px-[112px] pb-[112px]">
                     {team.map((member, i) => (
-                        <TeamMemberCard key={i} title={member.title} image={member.image} name={member.name} />
+                        <div key={i} className={i === team.length - 1 ? "pr-4 md:pr-[112px]" : ""}>
+                            <TeamMemberCard title={member.title} image={member.image} name={member.name} />
+                        </div> 
                     ))}
                 </div>
             </div>

@@ -105,24 +105,32 @@ const items = [
     {
         title: "Democratizing AI for Everyone",
         description: "We're on a mission to democratize AI with powerful open-source tools, from low-level frameworks to user-facing apps .",
-        image: "/assets/features/feature1.webp"
+        image: "/assets/features/feature0.webp",
+        imageWidth: 220
     },
     {
         title: "Do it your way.",
         description: "We're on a mission to democratize AI with powerful open-source tools, from low-level frameworks to user-facing apps .",
-        image: "/assets/features/feature1.webp"
+        image: "/assets/features/feature1.webp",
+        imageWidth: 85
     },
     {
         title: "Premium technology, in an easy format.",
         description: "We're on a mission to democratize AI with powerful open-source tools, from low-level frameworks to user-facing apps .",
-        image: "/assets/features/feature1.webp"
+        image: "/assets/features/feature2.webp",
+        imageWidth: 250
     }
 ];
 const DoThingsDifferently = ()=>{
     _s();
     const [openIndex, setOpenIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
+    const [imageOpacity, setImageOpacity] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(1);
     const toggleItem = (index)=>{
-        setOpenIndex((prev)=>prev === index ? null : index);
+        setImageOpacity(0);
+        setTimeout(()=>{
+            setOpenIndex((prev)=>prev === index ? null : index);
+            setImageOpacity(1);
+        }, 150);
     };
     const currentIndex = openIndex !== null && openIndex !== void 0 ? openIndex : 0;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -141,14 +149,14 @@ const DoThingsDifferently = ()=>{
                                     children: "differently"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/doThingsDifferently.tsx",
-                                    lineNumber: 42,
+                                    lineNumber: 50,
                                     columnNumber: 32
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 "."
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/doThingsDifferently.tsx",
-                            lineNumber: 41,
+                            lineNumber: 49,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -156,18 +164,18 @@ const DoThingsDifferently = ()=>{
                             children: "Create powerful AI workflows that solve real problems in minutes, not days."
                         }, void 0, false, {
                             fileName: "[project]/src/components/doThingsDifferently.tsx",
-                            lineNumber: 44,
+                            lineNumber: 52,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/doThingsDifferently.tsx",
-                    lineNumber: 40,
+                    lineNumber: 48,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/src/components/doThingsDifferently.tsx",
-                lineNumber: 39,
+                lineNumber: 47,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -190,7 +198,7 @@ const DoThingsDifferently = ()=>{
                                                 children: item.title
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/doThingsDifferently.tsx",
-                                                lineNumber: 62,
+                                                lineNumber: 70,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -202,20 +210,20 @@ const DoThingsDifferently = ()=>{
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$icons$2f$plusIcon$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["PlusIcon"], {}, void 0, false, {
                                                         fileName: "[project]/src/components/doThingsDifferently.tsx",
-                                                        lineNumber: 70,
+                                                        lineNumber: 78,
                                                         columnNumber: 19
                                                     }, ("TURBOPACK compile-time value", void 0)),
                                                     "Read more"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/doThingsDifferently.tsx",
-                                                lineNumber: 63,
+                                                lineNumber: 71,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/doThingsDifferently.tsx",
-                                        lineNumber: 58,
+                                        lineNumber: 66,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -227,62 +235,80 @@ const DoThingsDifferently = ()=>{
                                                 children: item.description
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/doThingsDifferently.tsx",
-                                                lineNumber: 78,
+                                                lineNumber: 86,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/doThingsDifferently.tsx",
-                                            lineNumber: 77,
+                                            lineNumber: 85,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/doThingsDifferently.tsx",
-                                        lineNumber: 74,
+                                        lineNumber: 82,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, index, true, {
                                 fileName: "[project]/src/components/doThingsDifferently.tsx",
-                                lineNumber: 53,
+                                lineNumber: 61,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)))
                     }, void 0, false, {
                         fileName: "[project]/src/components/doThingsDifferently.tsx",
-                        lineNumber: 51,
+                        lineNumber: 59,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "order-0 md:order-1 py-8 relative rounded-lg flex items-center justify-center border border-[#343435] bg-[url('/assets/different-bg.webp')] bg-cover bg-center bg-no-repeat w-full h-[300px] md:w-[576px] md:h-[576px] flex-shrink-0",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                            src: items[currentIndex].image,
-                            alt: items[currentIndex].title,
-                            width: 85,
-                            height: 424,
-                            className: "max-w-full max-h-full object-contain"
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/doThingsDifferently.tsx",
-                            lineNumber: 86,
-                            columnNumber: 11
-                        }, ("TURBOPACK compile-time value", void 0))
-                    }, void 0, false, {
+                        className: "order-0 md:order-1 py-8 relative rounded-lg flex items-center justify-center border border-[#343435] w-full h-[300px] md:w-[576px] md:h-[576px] flex-shrink-0 overflow-hidden",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
+                                src: "/assets/videoanimation.mp4",
+                                autoPlay: true,
+                                loop: true,
+                                muted: true,
+                                playsInline: true,
+                                className: "absolute inset-0 w-full h-full object-cover z-0"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/doThingsDifferently.tsx",
+                                lineNumber: 94,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                src: items[currentIndex].image,
+                                alt: items[currentIndex].title,
+                                width: items[currentIndex].imageWidth,
+                                height: 424,
+                                className: "max-w-full max-h-full object-contain relative z-10 transition-opacity duration-300 ease-in-out",
+                                style: {
+                                    opacity: imageOpacity
+                                },
+                                priority: true
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/doThingsDifferently.tsx",
+                                lineNumber: 102,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/src/components/doThingsDifferently.tsx",
-                        lineNumber: 85,
+                        lineNumber: 93,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/doThingsDifferently.tsx",
-                lineNumber: 50,
+                lineNumber: 58,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/doThingsDifferently.tsx",
-        lineNumber: 38,
+        lineNumber: 46,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
-_s(DoThingsDifferently, "6UZ+mnQ9sKC06YXeyhrfGXQCT10=");
+_s(DoThingsDifferently, "4f5l7xxVXzmXa+U9u5KudNKD5Wc=");
 _c = DoThingsDifferently;
 var _c;
 __turbopack_context__.k.register(_c, "DoThingsDifferently");

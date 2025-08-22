@@ -5,21 +5,21 @@ export const ThreePlatforms = () => {
         {
             name: "Rig",
             logo: "/assets/projects/rig-logo.webp",
-            bgImage: "/assets/different-bg.webp",
+            bgImage: "/assets/projects/rig-bg.webp",
             description:
                 "Open-source Rust LLM framework providing high-performance, modular APIs for building scalable AI applications with type safety and lightning-fast execution.",
         },
         {
             name: "Arc",
             logo: "/assets/projects/arc-logo.webp",
-            bgImage: "/assets/different-bg.webp",
+            bgImage: "/assets/projects/arc-bg.webp",
             description:
                 "Open-source Rust LLM framework providing high-performance, modular APIs for building scalable AI applications with type safety and lightning-fast execution.",
         },
         {
             name: "Ryzome",
             logo: "/assets/projects/ryzome-logo.webp",
-            bgImage: "/assets/different-bg.webp",
+            bgImage: "/assets/projects/ryzome-bg.webp",
             description:
                 "Open-source Rust LLM framework providing high-performance, modular APIs for building scalable AI applications with type safety and lightning-fast execution.",
         },
@@ -47,7 +47,7 @@ export const ThreePlatforms = () => {
                                 fill
                                 className="object-cover transition-opacity duration-[1000ms] opacity-0 group-hover:opacity-100"
                             />
-                            <div className="absolute inset-0 bg-black/50"></div>
+                            <div className="absolute inset-0 bg-black/20"/>
                             <div className="relative z-10 flex items-center justify-center w-full h-full">
                                 <Image
                                     src={platform.logo}

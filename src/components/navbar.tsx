@@ -11,12 +11,17 @@ export const Navbar = () => {
                     height={28}
                 />
                 <div className="flex font-medium gap-x-2 items-center">
-                    <div className="h-8 cursor-pointer flex border bg-black border-[#333333] rounded items-center px-3 text-[13px] justify-center">
+                    <a
+                        href="https://github.com/0xPlaygrounds"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="h-8 cursor-pointer flex border bg-black border-[#333333] hover:border-white/50 transition duration-300 ease-in-out rounded items-center px-3 text-[13px] justify-center"
+                    >
                         Github
-                    </div>  
-                    <div className="h-8 cursor-pointer flex bg-white px-3 text-[13px] rounded text-[#030304] items-center justify-center">
+                    </a>
+                    <div className="h-8 cursor-pointer transition duration-300 ease-in-out hover:bg-white/80 flex bg-white px-3 text-[13px] rounded text-[#030304] items-center justify-center">
                         Products
-                    </div>  
+                    </div>
                 </div>
             </div>
         </div>
