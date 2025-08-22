@@ -1,5 +1,11 @@
 {
   "app": {
+    "[project]/src/app/_not-found/page": [
+      "static/media/NeueHaasDisplayBlack-s.p.1e606080.ttf",
+      "static/media/NeueHaasDisplayBold-s.p.f3d243d5.ttf",
+      "static/media/NeueHaasDisplayMedium-s.p.8e814b2a.ttf",
+      "static/media/NeueHaasDisplayRoman-s.p.fa639891.ttf"
+    ],
     "[project]/src/app/page": [
       "static/media/NeueHaasDisplayBlack-s.p.1e606080.ttf",
       "static/media/NeueHaasDisplayBold-s.p.f3d243d5.ttf",

@@ -40,7 +40,36 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$neuehaas_3125b
 ;
 const metadata = {
     title: "Plagrounds",
-    description: "Fearless AI Company"
+    description: "Fearless AI Company",
+    openGraph: {
+        title: "Playgrounds",
+        type: "website",
+        locale: "en_US",
+        siteName: "Playgrounds",
+        description: "Fearless AI Company",
+        url: "https://playgrounds.network/",
+        images: [
+            {
+                url: "https://playgrounds.network/og/global.png",
+                width: 1200,
+                height: 630,
+                alt: "Playgrounds OG"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Playgrounds",
+        description: "Playgrounds - Fearless AI Company",
+        images: [
+            {
+                url: "https://playgrounds.network/og/global.png",
+                width: 1200,
+                height: 628,
+                alt: "Playgrounds - Fearless AI Company"
+            }
+        ]
+    }
 };
 function RootLayout({ children }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("html", {
@@ -52,12 +81,12 @@ function RootLayout({ children }) {
                     href: "https://use.typekit.net/hml2duc.css"
                 }, void 0, false, {
                     fileName: "[project]/src/app/layout.tsx",
-                    lineNumber: 45,
+                    lineNumber: 74,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/layout.tsx",
-                lineNumber: 44,
+                lineNumber: 73,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$15$2e$4$2e$6_react$2d$dom$40$19$2e$1$2e$0_react$40$19$2e$1$2e$0_$5f$react$40$19$2e$1$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("body", {
@@ -65,13 +94,13 @@ function RootLayout({ children }) {
                 children: children
             }, void 0, false, {
                 fileName: "[project]/src/app/layout.tsx",
-                lineNumber: 47,
+                lineNumber: 76,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/layout.tsx",
-        lineNumber: 43,
+        lineNumber: 72,
         columnNumber: 5
     }, this);
 }

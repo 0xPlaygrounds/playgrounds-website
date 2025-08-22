@@ -6,6 +6,35 @@ import localFont from 'next/font/local';
 export const metadata: Metadata = {
   title: "Plagrounds",
   description: "Fearless AI Company",
+  openGraph: {
+    title: "Playgrounds",
+    type: "website",
+    locale: "en_US",
+    siteName: "Playgrounds",
+    description: "Fearless AI Company",
+    url: "https://playgrounds.network/",
+    images: [
+      {
+        url: "https://playgrounds.network/og/global.png",
+        width: 1200,
+        height: 630,
+        alt: "Playgrounds OG",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Playgrounds",
+    description: "Playgrounds - Fearless AI Company",
+    images: [
+      {
+        url: "https://playgrounds.network/og/global.png",
+        width: 1200,
+        height: 628,
+        alt: "Playgrounds - Fearless AI Company",
+      },
+    ],
+  },
 };
 
 const neueHaas = localFont({
