@@ -1,4 +1,7 @@
+"use client"
+
 import Image from "next/image"
+import { useRef, useState, useEffect } from "react"
 
 type TeamMember = {
     name: string
@@ -12,7 +15,7 @@ const team: TeamMember[] = [
     { name: "Stopher", title: "CTO", image: "/assets/team/stopher.webp" },
     { name: "Garance", title: "Lead Developer", image: "/assets/team/garance.webp" },
     { name: "Mateo", title: "Product Manager", image: "/assets/team/mateo.webp" },
-    { name: "Mochan", title: "Rust Engineer", image: "/assets/team/mochan.webp" },
+    { name: "Mochan", title: "Founding Engineer", image: "/assets/team/mochan.webp" },
     { name: "Josh", title: "Devrel Engineer", image: "/assets/team/josh.webp" },
     { name: "Natasha", title: "Marketing Director", image: "/assets/team/natasha.webp" },
     { name: "Mateusz", title: "Design Engineer", image: "/assets/team/mateusz.webp" },
@@ -27,6 +30,8 @@ const TeamMemberCard = ({ name, title, image }: TeamMember) => {
                 width={302}
                 height={362}
                 className="w-full h-full object-cover filter grayscale transition duration-500 group-hover:grayscale-0"
+                draggable={false}
+                onDragStart={(e) => e.preventDefault()}
             />
             <div className="absolute bottom-4 left-4 flex flex-col">
                 <span className="text-white">{name}</span>
@@ -37,6 +42,43 @@ const TeamMemberCard = ({ name, title, image }: TeamMember) => {
 }
 
 export const MeetTeam = () => {
+    const scrollContainerRef = useRef<HTMLDivElement>(null)
+    const [isDragging, setIsDragging] = useState(false)
+    const [startX, setStartX] = useState(0)
+    const [scrollLeft, setScrollLeft] = useState(0)
+
+    const handleMouseDown = (e: React.MouseEvent) => {
+        if (!scrollContainerRef.current) return
+        e.preventDefault() // Prevent default drag behavior
+        setIsDragging(true)
+        setStartX(e.pageX - scrollContainerRef.current.offsetLeft)
+        setScrollLeft(scrollContainerRef.current.scrollLeft)
+        scrollContainerRef.current.style.cursor = 'grabbing'
+        scrollContainerRef.current.style.userSelect = 'none'
+    }
+
+    const handleMouseUp = () => {
+        setIsDragging(false)
+        if (scrollContainerRef.current) {
+            scrollContainerRef.current.style.cursor = 'grab'
+            scrollContainerRef.current.style.userSelect = 'auto'
+        }
+    }
+
+    const handleMouseMove = (e: React.MouseEvent) => {
+        if (!isDragging || !scrollContainerRef.current) return
+        e.preventDefault()
+        const x = e.pageX - scrollContainerRef.current.offsetLeft
+        const walk = (x - startX) * 2 // Scroll speed multiplier
+        scrollContainerRef.current.scrollLeft = scrollLeft - walk
+    }
+
+    useEffect(() => {
+        const handleGlobalMouseUp = () => setIsDragging(false)
+        document.addEventListener('mouseup', handleGlobalMouseUp)
+        return () => document.removeEventListener('mouseup', handleGlobalMouseUp)
+    }, [])
+
     return (
         <div className="flex flex-col gap-y-[80px] pt-32 bg-gradient-to-b from-[#0A0A0A] from-65% to-[#16161A]">
             <div className="flex text-[28px] md:text-[52px] text-center flex-col px-4 md:px-[112px]">
@@ -47,7 +89,15 @@ export const MeetTeam = () => {
                     A dedicated team, constantly improving what we have to offer.
                 </span>
             </div>
-            <div className="w-full overflow-x-auto mr-4">
+            <div 
+                ref={scrollContainerRef}
+                className="w-full overflow-x-auto mr-4 custom-scrollbar cursor-grab"
+                onMouseDown={handleMouseDown}
+                onMouseUp={handleMouseUp}
+                onMouseMove={handleMouseMove}
+                onMouseLeave={handleMouseUp}
+                onDragStart={(e) => e.preventDefault()} // Prevent default drag on container
+            >
                 <div className="flex gap-x-4 flex-nowrap max-w-fit mx-auto px-4 md:px-[112px] pb-[112px]">
                     {team.map((member, i) => (
                         <div key={i} className={i === team.length - 1 ? "pr-4 md:pr-[112px]" : ""}>

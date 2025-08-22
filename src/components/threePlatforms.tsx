@@ -26,7 +26,7 @@ export const ThreePlatforms = () => {
     ];
 
     return (
-        <div className="flex flex-col items-center gap-y-5 md:gap-y-8 px-4 md:px-[112px] md:py-[112px]" id="products">
+        <div className="flex flex-col items-center gap-y-5 md:gap-y-8 px-4 md:px-[112px] md:pt-[96px] md:pb-[112px]" id="products">
             <div className="flex items-center leading-none text-[28px] md:text-[52px] flex-col text-center justify-center">
                 <span>
                     A triad of platforms to{" "}
