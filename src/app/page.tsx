@@ -1,5 +1,4 @@
 import { CreateCombine } from '@/components/createCombine';
-import { DeepDiveStories } from '@/components/deepDiveStories';
 import { DoThingsDifferently } from '@/components/doThingsDifferently';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
@@ -17,7 +16,6 @@ export default function Home() {
       <CreateCombine />
       <ThreePlatforms />
       <DoThingsDifferently />
-      <DeepDiveStories />
       <MeetTeam />
       <Footer />
     </div>
