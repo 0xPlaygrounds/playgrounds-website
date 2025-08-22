@@ -14,19 +14,19 @@ export const ThreePlatforms = () => {
             logo: "/assets/projects/arc-logo.webp",
             bgImage: "/assets/projects/arc-bg.webp",
             description:
-                "Open-source Rust LLM framework providing high-performance, modular APIs for building scalable AI applications with type safety and lightning-fast execution.",
+                "AI Rig Complex - A thriving community ecosystem fostering partnerships, side projects, and collaborative innovation built around the Rig framework.",
         },
         {
             name: "Ryzome",
             logo: "/assets/projects/ryzome-logo.webp",
             bgImage: "/assets/projects/ryzome-bg.webp",
             description:
-                "Open-source Rust LLM framework providing high-performance, modular APIs for building scalable AI applications with type safety and lightning-fast execution.",
+                "AI-powered workspace platform that transforms how teams collaborate, create, and innovate. The user-facing canvas that brings AI capabilities to everyday workflows.",
         },
     ];
 
     return (
-        <div className="flex flex-col items-center gap-y-5 md:gap-y-8 px-4 md:px-[112px] md:py-[112px]">
+        <div className="flex flex-col items-center gap-y-5 md:gap-y-8 px-4 md:px-[112px] md:py-[112px]" id="products">
             <div className="flex items-center leading-none text-[28px] md:text-[52px] flex-col text-center justify-center">
                 <span>
                     A triad of platforms to{" "}

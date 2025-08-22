@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 
 export const Navbar = () => {
@@ -19,7 +21,12 @@ export const Navbar = () => {
                     >
                         Github
                     </a>
-                    <div className="h-8 cursor-pointer transition duration-300 ease-in-out hover:bg-white/80 flex bg-white px-3 text-[13px] rounded text-[#030304] items-center justify-center">
+                    <div className="h-8 cursor-pointer transition duration-300 ease-in-out hover:bg-white/80 flex bg-white px-3 text-[13px] rounded text-[#030304] items-center justify-center" onClick={() => {
+                        const element = document.getElementById("products");
+                        if (element) {
+                            element.scrollIntoView({ behavior: "smooth" });
+                        }
+                    }}>
                         Products
                     </div>
                 </div>
