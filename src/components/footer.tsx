@@ -1,4 +1,7 @@
+'use client';
+
 import Image from 'next/image';
+import posthog from 'posthog-js';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -62,6 +65,12 @@ export const Footer = () => {
                   <a
                     href="mailto:info@playgrounds.com"
                     className="hover:underline"
+                    onClick={() => {
+                      posthog.capture('cta_click', {
+                        cta: 'footer_email',
+                        href: 'mailto:info@playgrounds.com',
+                      });
+                    }}
                   >
                     info@playgrounds.com
                   </a>
@@ -80,6 +89,12 @@ export const Footer = () => {
                     href="https://github.com/0xPlaygrounds"
                     target="_blank"
                     className="hover:underline"
+                    onClick={() => {
+                      posthog.capture('cta_click', {
+                        cta: 'footer_github',
+                        href: 'https://github.com/0xPlaygrounds',
+                      });
+                    }}
                   >
                     Github
                   </a>
@@ -87,6 +102,12 @@ export const Footer = () => {
                     href="https://www.youtube.com/@arcdotfun"
                     target="_blank"
                     className="hover:underline"
+                    onClick={() => {
+                      posthog.capture('cta_click', {
+                        cta: 'footer_youtube',
+                        href: 'https://www.youtube.com/@arcdotfun',
+                      });
+                    }}
                   >
                     Youtube
                   </a>
@@ -94,6 +115,12 @@ export const Footer = () => {
                     href="https://x.com/Playgrounds0x"
                     target="_blank"
                     className="hover:underline"
+                    onClick={() => {
+                      posthog.capture('cta_click', {
+                        cta: 'footer_x',
+                        href: 'https://x.com/Playgrounds0x',
+                      });
+                    }}
                   >
                     X
                   </a>

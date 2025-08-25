@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import posthog from 'posthog-js';
 
 export const Navbar = () => {
   return (
@@ -18,12 +19,19 @@ export const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="h-8 cursor-pointer flex border bg-black border-[#333333] hover:border-white/50 transition duration-300 ease-in-out rounded items-center px-3 text-[13px] justify-center"
+            onClick={() => {
+              posthog.capture('cta_click', {
+                cta: 'navbar_github',
+                href: 'https://github.com/0xPlaygrounds',
+              });
+            }}
           >
             Github
           </a>
           <div
             className="h-8 cursor-pointer transition duration-300 ease-in-out hover:bg-white/80 flex bg-white px-3 text-[13px] rounded text-[#030304] items-center justify-center"
             onClick={() => {
+              posthog.capture('cta_click', { cta: 'navbar_products_scroll' });
               const element = document.getElementById('products');
               if (element) {
                 element.scrollIntoView({ behavior: 'smooth' });
