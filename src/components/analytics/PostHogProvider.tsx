@@ -20,8 +20,7 @@ export function PostHogClientProvider({ children }: Props) {
     if (!key) return;
 
     posthog.init(key, {
-      api_host:
-        process.env.NEXT_PUBLIC_POSTHOG_HOST || 'https://us.i.posthog.com',
+      api_host: '/panopticon',
       capture_pageview: false,
       autocapture: true,
     });
