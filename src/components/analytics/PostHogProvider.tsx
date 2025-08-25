@@ -21,7 +21,7 @@ export function PostHogClientProvider({ children }: Props) {
 
     posthog.init(key, {
       api_host: '/panopticon',
-      capture_pageview: false,
+      capture_pageview: true,
       autocapture: true,
     });
     setIsInitialized(true);
