@@ -31,7 +31,7 @@ export const ThreePlatforms = () => {
       name: 'Ryzome',
       logo: '/assets/projects/ryzome-logo.webp',
       bgImage: '/assets/projects/ryzome-bg.webp',
-      // TODO: Add href once the official Ryzome URL is confirmed
+      href: buildUtmUrl('https://ryzome.ai/', 'three_platforms_ryzome'),
       description:
         'AI-powered workspace platform that transforms how teams collaborate, create, and innovate. The user-facing canvas that brings AI capabilities to everyday workflows.',
     },
