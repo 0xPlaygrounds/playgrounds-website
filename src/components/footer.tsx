@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { SOCIAL_LINKS, CONTACT_INFO } from '../constants/socialLinks';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -25,10 +26,10 @@ export const Footer = () => {
                   <span className="uppercase text-[#D4D4D4]">contact</span>
                   <div className="flex flex-col gap-y-4">
                     <a
-                      href="mailto:info@playgrounds.com"
+                      href={`mailto:${CONTACT_INFO.email}`}
                       className="hover:underline"
                     >
-                      info@playgrounds.com
+                      {CONTACT_INFO.email}
                     </a>
                   </div>
                 </div>
@@ -60,10 +61,10 @@ export const Footer = () => {
                 <span className="uppercase text-[#D4D4D4]">contact</span>
                 <div className="flex flex-col gap-y-4">
                   <a
-                    href="mailto:info@playgrounds.com"
+                    href={`mailto:${CONTACT_INFO.email}`}
                     className="hover:underline"
                   >
-                    info@playgrounds.com
+                    {CONTACT_INFO.email}
                   </a>
                 </div>
               </div>
@@ -77,21 +78,21 @@ export const Footer = () => {
                 <span className="uppercase text-[#D4D4D4]">follow us</span>
                 <div className="flex flex-col gap-y-4">
                   <a
-                    href="https://github.com/0xPlaygrounds"
+                    href={SOCIAL_LINKS.github}
                     target="_blank"
                     className="hover:underline"
                   >
                     Github
                   </a>
                   <a
-                    href="https://www.youtube.com/@arcdotfun"
+                    href={SOCIAL_LINKS.youtube}
                     target="_blank"
                     className="hover:underline"
                   >
                     Youtube
                   </a>
                   <a
-                    href="https://x.com/Playgrounds0x"
+                    href={SOCIAL_LINKS.x}
                     target="_blank"
                     className="hover:underline"
                   >

@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { SOCIAL_LINKS } from '../constants/socialLinks';
 
 export const Navbar = () => {
   return (
@@ -14,7 +15,7 @@ export const Navbar = () => {
         />
         <div className="flex font-medium gap-x-2 items-center">
           <a
-            href="https://github.com/0xPlaygrounds"
+            href={SOCIAL_LINKS.github}
             target="_blank"
             rel="noopener noreferrer"
             className="h-8 cursor-pointer flex border bg-black border-[#333333] hover:border-white/50 transition duration-300 ease-in-out rounded items-center px-3 text-[13px] justify-center"
