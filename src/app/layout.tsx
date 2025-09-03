@@ -3,7 +3,7 @@ import './globals.css';
 import localFont from 'next/font/local';
 
 export const metadata: Metadata = {
-  title: 'Plagrounds',
+  title: 'Playgrounds',
   description: 'Fearless AI Company',
   openGraph: {
     title: 'Playgrounds',
