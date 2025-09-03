@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
       return [
         {
           source: '/panopticon/:path*',
-          destination: `${target}panopticon/:path*`,
+          destination: `${target}:path*`,
         },
       ];
     } catch (error) {
