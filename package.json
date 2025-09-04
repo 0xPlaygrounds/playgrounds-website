@@ -14,7 +14,9 @@
     "pre-commit": "lint-staged"
   },
   "dependencies": {
+    "@posthog/nextjs": "^0.0.2",
     "next": "15.4.6",
+    "posthog-js": "^1.260.2",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
