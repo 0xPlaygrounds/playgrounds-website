@@ -5,7 +5,7 @@ import { PostHogClientProvider } from '@/components/analytics/PostHogProvider';
 import { Suspense } from 'react';
 
 export const metadata: Metadata = {
-  title: 'Plagrounds',
+  title: 'Playgrounds',
   description: 'Fearless AI Company',
   openGraph: {
     title: 'Playgrounds',
