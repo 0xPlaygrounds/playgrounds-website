@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import localFont from 'next/font/local';
+import { PostHogClientProvider } from '@/components/analytics/PostHogProvider';
+import { Suspense } from 'react';
 
 export const metadata: Metadata = {
   title: 'Playgrounds',
@@ -73,7 +75,9 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://use.typekit.net/hml2duc.css" />
       </head>
       <body className={`antialiased ${neueHaas.variable} font-sans`}>
-        {children}
+        <Suspense fallback={null}>
+          <PostHogClientProvider>{children}</PostHogClientProvider>
+        </Suspense>
       </body>
     </html>
   );
