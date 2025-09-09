@@ -1,0 +1,7 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+
+git commit message body's lines must not be longer than 100 characters [body-max-line-length]

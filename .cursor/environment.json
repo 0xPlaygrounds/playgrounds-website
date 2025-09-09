@@ -1,0 +1,15 @@
+{
+  "install": "pnpm install --frozen-lockfile",
+  "terminals": [
+    {
+      "name": "Start Development Server",
+      "command": "pnpm dev"
+    }
+  ],
+  "start": "echo Environment ready",
+  "env": {
+    "NODE_ENV": "development",
+    "NEXT_TELEMETRY_DISABLED": "1"
+  },
+  "persistedDirectories": ["node_modules", ".next"]
+}
