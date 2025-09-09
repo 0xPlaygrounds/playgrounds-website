@@ -125,6 +125,19 @@ export const Footer = () => {
                   >
                     X
                   </a>
+                  <a
+                    href={SOCIAL_LINKS.discord}
+                    target="_blank"
+                    className="hover:underline"
+                    onClick={() => {
+                      posthog.capture('cta_click', {
+                        cta: 'footer_discord',
+                        href: 'https://discord.com/invite/playgrounds',
+                      });
+                    }}
+                  >
+                    Discord
+                  </a>
                 </div>
               </div>
             </div>
