@@ -34,16 +34,26 @@ const team: TeamMember[] = [
     title: 'Design Engineer',
     image: '/assets/team/mateusz.webp',
   },
+  {
+    name: 'Yavens',
+    title: 'Engineer (intern)',
+    image: '/assets/team/yavens.webp',
+  },
+  {
+    name: 'Frank',
+    title: 'Engineer (intern)',
+    image: '/assets/team/frank.webp',
+  },
 ];
 
 const TeamMemberCard = ({ name, title, image }: TeamMember) => {
   return (
-    <div className="relative w-[302px] h-[362px] overflow-hidden rounded-lg group flex-shrink-0">
+    <div className="relative w-[240px] h-[288px] overflow-hidden rounded-lg group flex-shrink-0">
       <Image
         src={image || '/placeholder.svg'}
         alt={name}
-        width={302}
-        height={362}
+        width={240}
+        height={288}
         className="w-full h-full object-cover filter grayscale transition duration-500 group-hover:grayscale-0"
         draggable={false}
         onDragStart={(e) => e.preventDefault()}
