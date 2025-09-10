@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import { useRef, useState, useEffect } from 'react';
 
 type TeamMember = {
   name: string;
@@ -14,7 +13,7 @@ const team: TeamMember[] = [
   { name: 'Thierry', title: 'CPO', image: '/assets/team/thierry.webp' },
   { name: 'Stopher', title: 'CTO', image: '/assets/team/stopher.webp' },
   {
-    name: 'Garance',
+    name: 'Marie-Aurore',
     title: 'Lead Developer',
     image: '/assets/team/garance.webp',
   },
@@ -26,7 +25,7 @@ const team: TeamMember[] = [
   },
   { name: 'Josh', title: 'Devrel Engineer', image: '/assets/team/josh.webp' },
   {
-    name: 'Natasha',
+    name: 'Tanit',
     title: 'Marketing Director',
     image: '/assets/team/natasha.webp',
   },
@@ -35,16 +34,26 @@ const team: TeamMember[] = [
     title: 'Design Engineer',
     image: '/assets/team/mateusz.webp',
   },
+  {
+    name: 'Yavens',
+    title: 'Engineer (intern)',
+    image: '/assets/team/yavens.webp',
+  },
+  {
+    name: 'Frank',
+    title: 'Engineer (intern)',
+    image: '/assets/team/frank.webp',
+  },
 ];
 
 const TeamMemberCard = ({ name, title, image }: TeamMember) => {
   return (
-    <div className="relative w-[302px] h-[362px] overflow-hidden rounded-lg group flex-shrink-0">
+    <div className="relative w-[240px] h-[288px] overflow-hidden rounded-lg group flex-shrink-0">
       <Image
         src={image || '/placeholder.svg'}
         alt={name}
-        width={302}
-        height={362}
+        width={240}
+        height={288}
         className="w-full h-full object-cover filter grayscale transition duration-500 group-hover:grayscale-0"
         draggable={false}
         onDragStart={(e) => e.preventDefault()}
@@ -58,43 +67,6 @@ const TeamMemberCard = ({ name, title, image }: TeamMember) => {
 };
 
 export const MeetTeam = () => {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-
-  const handleMouseDown = (e: React.MouseEvent) => {
-    if (!scrollContainerRef.current) return;
-    e.preventDefault(); // Prevent default drag behavior
-    setIsDragging(true);
-    setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
-    setScrollLeft(scrollContainerRef.current.scrollLeft);
-    scrollContainerRef.current.style.cursor = 'grabbing';
-    scrollContainerRef.current.style.userSelect = 'none';
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.style.cursor = 'grab';
-      scrollContainerRef.current.style.userSelect = 'auto';
-    }
-  };
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging || !scrollContainerRef.current) return;
-    e.preventDefault();
-    const x = e.pageX - scrollContainerRef.current.offsetLeft;
-    const walk = (x - startX) * 2; // Scroll speed multiplier
-    scrollContainerRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  useEffect(() => {
-    const handleGlobalMouseUp = () => setIsDragging(false);
-    document.addEventListener('mouseup', handleGlobalMouseUp);
-    return () => document.removeEventListener('mouseup', handleGlobalMouseUp);
-  }, []);
-
   return (
     <div className="flex flex-col gap-y-[80px] pt-32 bg-gradient-to-b from-[#0A0A0A] from-65% to-[#16161A]">
       <div className="flex text-[28px] md:text-[52px] text-center flex-col px-4 md:px-[112px]">
@@ -106,27 +78,15 @@ export const MeetTeam = () => {
           A dedicated team, constantly improving what we have to offer.
         </span>
       </div>
-      <div
-        ref={scrollContainerRef}
-        className="w-full overflow-x-auto mr-4 custom-scrollbar cursor-grab"
-        onMouseDown={handleMouseDown}
-        onMouseUp={handleMouseUp}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseUp}
-        onDragStart={(e) => e.preventDefault()} // Prevent default drag on container
-      >
-        <div className="flex gap-x-4 flex-nowrap max-w-fit mx-auto px-4 md:px-[112px] pb-[112px]">
+      <div className="w-full px-4 md:px-[112px] pb-[112px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 justify-items-center">
           {team.map((member, i) => (
-            <div
+            <TeamMemberCard
               key={i}
-              className={i === team.length - 1 ? 'pr-4 md:pr-[112px]' : ''}
-            >
-              <TeamMemberCard
-                title={member.title}
-                image={member.image}
-                name={member.name}
-              />
-            </div>
+              title={member.title}
+              image={member.image}
+              name={member.name}
+            />
           ))}
         </div>
       </div>
