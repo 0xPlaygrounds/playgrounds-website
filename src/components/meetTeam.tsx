@@ -13,7 +13,7 @@ const team: TeamMember[] = [
   { name: 'Thierry', title: 'CPO', image: '/assets/team/thierry.webp' },
   { name: 'Stopher', title: 'CTO', image: '/assets/team/stopher.webp' },
   {
-    name: 'Marie-Aurore',
+    name: 'Marie',
     title: 'Lead Developer',
     image: '/assets/team/garance.webp',
   },
