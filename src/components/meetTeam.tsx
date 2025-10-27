@@ -17,14 +17,10 @@ const team: TeamMember[] = [
     title: 'Lead Developer',
     image: '/assets/team/garance.webp',
   },
-  {
-    name: 'Mateo',
-    title: 'Product Manager (Founding)',
-    image: '/assets/team/mateo.webp',
-  },
+  { name: 'Mateo', title: 'Product Manager', image: '/assets/team/mateo.webp' },
   {
     name: 'Mochan',
-    title: 'Engineer (Founding)',
+    title: 'Founding Engineer',
     image: '/assets/team/mochan.webp',
   },
   {
@@ -56,6 +52,11 @@ const team: TeamMember[] = [
     name: 'Yavens',
     title: 'Engineer (intern)',
     image: '/assets/team/yavens.webp',
+  },
+  {
+    name: 'Frank',
+    title: 'Engineer (intern)',
+    image: '/assets/team/frank.webp',
   },
 ];
 
