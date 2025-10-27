@@ -13,17 +13,20 @@ const team: TeamMember[] = [
   { name: 'Thierry', title: 'CPO', image: '/assets/team/thierry.webp' },
   { name: 'Stopher', title: 'CTO', image: '/assets/team/stopher.webp' },
   {
-    name: 'Marie-Aurore',
+    name: 'Marie',
     title: 'Lead Developer',
     image: '/assets/team/garance.webp',
   },
-  { name: 'Mateo', title: 'Product Manager', image: '/assets/team/mateo.webp' },
+  {
+    name: 'Mateo',
+    title: 'Product Manager (Founding)',
+    image: '/assets/team/mateo.webp',
+  },
   {
     name: 'Mochan',
-    title: 'Founding Engineer',
+    title: 'Engineer (Founding)',
     image: '/assets/team/mochan.webp',
   },
-  { name: 'Josh', title: 'Devrel Engineer', image: '/assets/team/josh.webp' },
   {
     name: 'Tanit',
     title: 'Marketing Director',
@@ -35,14 +38,24 @@ const team: TeamMember[] = [
     image: '/assets/team/mateusz.webp',
   },
   {
-    name: 'Yavens',
-    title: 'Engineer (intern)',
-    image: '/assets/team/yavens.webp',
+    name: 'Josh',
+    title: 'Rig Framework Lead',
+    image: '/assets/team/josh.webp',
+  },
+  {
+    name: 'Fay',
+    title: 'Backend Engineer',
+    image: '/assets/team/fay.jpeg',
   },
   {
     name: 'Frank',
-    title: 'Engineer (intern)',
+    title: 'Full Stack Engineer',
     image: '/assets/team/frank.webp',
+  },
+  {
+    name: 'Yavens',
+    title: 'Engineer (intern)',
+    image: '/assets/team/yavens.webp',
   },
 ];
 
