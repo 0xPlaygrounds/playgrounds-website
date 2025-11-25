@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { useState } from 'react';
 
 type TeamMember = {
   name: string;
@@ -14,10 +15,14 @@ const team: TeamMember[] = [
   { name: 'Stopher', title: 'CTO', image: '/assets/team/stopher.webp' },
   {
     name: 'Marie',
-    title: 'Lead Developer',
+    title: 'Lead Engineer',
     image: '/assets/team/garance.webp',
   },
-  { name: 'Mateo', title: 'Product Manager', image: '/assets/team/mateo.webp' },
+  {
+    name: 'Mateo',
+    title: 'Product Manager & Engineer',
+    image: '/assets/team/mateo.webp',
+  },
   {
     name: 'Mochan',
     title: 'Founding Engineer',
@@ -55,15 +60,39 @@ const team: TeamMember[] = [
   },
 ];
 
-const TeamMemberCard = ({ name, title, image }: TeamMember) => {
+type TeamMemberCardProps = TeamMember & {
+  isActive: boolean;
+  onActivate: () => void;
+};
+
+const TeamMemberCard = ({
+  name,
+  title,
+  image,
+  isActive,
+  onActivate,
+}: TeamMemberCardProps) => {
   return (
-    <div className="relative w-[240px] h-[288px] overflow-hidden rounded-lg group flex-shrink-0">
+    <div
+      className="relative w-[240px] h-[288px] overflow-hidden rounded-lg group flex-shrink-0 cursor-pointer"
+      onClick={onActivate}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          onActivate();
+        }
+      }}
+    >
       <Image
         src={image || '/placeholder.svg'}
         alt={name}
         width={240}
         height={288}
-        className="w-full h-full object-cover filter grayscale transition duration-500 group-hover:grayscale-0"
+        className={`w-full h-full object-cover filter transition duration-500 ${
+          isActive ? 'grayscale-0' : 'grayscale'
+        } group-hover:grayscale-0`}
         draggable={false}
         onDragStart={(e) => e.preventDefault()}
       />
@@ -76,6 +105,12 @@ const TeamMemberCard = ({ name, title, image }: TeamMember) => {
 };
 
 export const MeetTeam = () => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const handleMemberToggle = (index: number) => {
+    setActiveIndex((prev) => (prev === index ? null : index));
+  };
+
   return (
     <div className="flex flex-col gap-y-[80px] pt-32 bg-gradient-to-b from-[#0A0A0A] from-65% to-[#16161A]">
       <div className="flex text-[28px] md:text-[52px] text-center flex-col px-4 md:px-[112px]">
@@ -95,6 +130,8 @@ export const MeetTeam = () => {
               title={member.title}
               image={member.image}
               name={member.name}
+              isActive={activeIndex === i}
+              onActivate={() => handleMemberToggle(i)}
             />
           ))}
         </div>

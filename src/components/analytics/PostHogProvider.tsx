@@ -21,6 +21,7 @@ export function PostHogClientProvider({ children }: Props) {
 
     posthog.init(key, {
       api_host: '/panopticon',
+      ui_host: 'https://us.i.posthog.com',
       capture_pageview: true,
       autocapture: true,
     });
