@@ -128,17 +128,31 @@ export const MeetTeam = () => {
         </span>
       </div>
       <div className="w-full px-4 md:px-[112px] pb-[112px]">
-        <div className="flex flex-wrap justify-center gap-4">
-          {team.map((member, i) => (
-            <TeamMemberCard
-              key={i}
-              title={member.title}
-              image={member.image}
-              name={member.name}
-              isActive={activeIndex === i}
-              onActivate={() => handleMemberToggle(i)}
-            />
-          ))}
+        <div className="flex flex-col gap-4 items-center">
+          <div className="flex flex-wrap justify-center gap-4">
+            {team.slice(0, 7).map((member, i) => (
+              <TeamMemberCard
+                key={i}
+                title={member.title}
+                image={member.image}
+                name={member.name}
+                isActive={activeIndex === i}
+                onActivate={() => handleMemberToggle(i)}
+              />
+            ))}
+          </div>
+          <div className="flex flex-wrap justify-center gap-4">
+            {team.slice(7).map((member, i) => (
+              <TeamMemberCard
+                key={i + 7}
+                title={member.title}
+                image={member.image}
+                name={member.name}
+                isActive={activeIndex === i + 7}
+                onActivate={() => handleMemberToggle(i + 7)}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>
