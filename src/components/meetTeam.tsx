@@ -111,6 +111,7 @@ const TeamMemberCard = ({
 
 export const MeetTeam = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const firstRowSize = 7;
 
   const handleMemberToggle = (index: number) => {
     setActiveIndex((prev) => (prev === index ? null : index));
@@ -130,7 +131,7 @@ export const MeetTeam = () => {
       <div className="w-full px-4 md:px-[112px] pb-[112px]">
         <div className="flex flex-col gap-4 items-center">
           <div className="flex flex-wrap justify-center gap-4">
-            {team.slice(0, 7).map((member, i) => (
+            {team.slice(0, firstRowSize).map((member, i) => (
               <TeamMemberCard
                 key={i}
                 title={member.title}
@@ -142,14 +143,14 @@ export const MeetTeam = () => {
             ))}
           </div>
           <div className="flex flex-wrap justify-center gap-4">
-            {team.slice(7).map((member, i) => (
+            {team.slice(firstRowSize).map((member, i) => (
               <TeamMemberCard
-                key={i + 7}
+                key={i + firstRowSize}
                 title={member.title}
                 image={member.image}
                 name={member.name}
-                isActive={activeIndex === i + 7}
-                onActivate={() => handleMemberToggle(i + 7)}
+                isActive={activeIndex === i + firstRowSize}
+                onActivate={() => handleMemberToggle(i + firstRowSize)}
               />
             ))}
           </div>
