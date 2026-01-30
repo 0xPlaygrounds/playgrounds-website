@@ -133,7 +133,7 @@ export const MeetTeam = () => {
           <div className="flex flex-wrap justify-center gap-4">
             {team.slice(0, firstRowSize).map((member, i) => (
               <TeamMemberCard
-                key={i}
+                key={member.name}
                 title={member.title}
                 image={member.image}
                 name={member.name}
@@ -145,7 +145,7 @@ export const MeetTeam = () => {
           <div className="flex flex-wrap justify-center gap-4">
             {team.slice(firstRowSize).map((member, i) => (
               <TeamMemberCard
-                key={i + firstRowSize}
+                key={member.name}
                 title={member.title}
                 image={member.image}
                 name={member.name}
