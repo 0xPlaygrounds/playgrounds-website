@@ -54,6 +54,11 @@ const team: TeamMember[] = [
     image: '/assets/team/frank.webp',
   },
   {
+    name: 'Eric',
+    title: 'Engineer',
+    image: '/assets/team/eric.jpeg',
+  },
+  {
     name: 'Yavens',
     title: 'Engineer (intern)',
     image: '/assets/team/yavens.webp',
@@ -123,7 +128,7 @@ export const MeetTeam = () => {
         </span>
       </div>
       <div className="w-full px-4 md:px-[112px] pb-[112px]">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 justify-items-center">
+        <div className="flex flex-wrap justify-center gap-4">
           {team.map((member, i) => (
             <TeamMemberCard
               key={i}
