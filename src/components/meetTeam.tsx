@@ -55,7 +55,7 @@ const team: TeamMember[] = [
   },
   {
     name: 'Eric',
-    title: 'Engineer',
+    title: 'Growth Manager',
     image: '/assets/team/eric.jpeg',
   },
   {
@@ -111,7 +111,6 @@ const TeamMemberCard = ({
 
 export const MeetTeam = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const firstRowSize = 7;
 
   const handleMemberToggle = (index: number) => {
     setActiveIndex((prev) => (prev === index ? null : index));
@@ -129,39 +128,17 @@ export const MeetTeam = () => {
         </span>
       </div>
       <div className="w-full px-4 md:px-[112px] pb-[112px]">
-        <div className="flex flex-col gap-4 items-center">
-          <div className="flex flex-wrap justify-center gap-4">
-            {team.slice(0, firstRowSize).map((member, i) => {
-              const absoluteIndex = i;
-
-              return (
-                <TeamMemberCard
-                  key={member.name}
-                  title={member.title}
-                  image={member.image}
-                  name={member.name}
-                  isActive={activeIndex === absoluteIndex}
-                  onActivate={() => handleMemberToggle(absoluteIndex)}
-                />
-              );
-            })}
-          </div>
-          <div className="flex flex-wrap justify-center gap-4">
-            {team.slice(firstRowSize).map((member, i) => {
-              const absoluteIndex = i + firstRowSize;
-
-              return (
-                <TeamMemberCard
-                  key={member.name}
-                  title={member.title}
-                  image={member.image}
-                  name={member.name}
-                  isActive={activeIndex === absoluteIndex}
-                  onActivate={() => handleMemberToggle(absoluteIndex)}
-                />
-              );
-            })}
-          </div>
+        <div className="grid grid-cols-[repeat(auto-fill,240px)] gap-4 justify-center">
+          {team.map((member, i) => (
+            <TeamMemberCard
+              key={member.name}
+              title={member.title}
+              image={member.image}
+              name={member.name}
+              isActive={activeIndex === i}
+              onActivate={() => handleMemberToggle(i)}
+            />
+          ))}
         </div>
       </div>
     </div>
