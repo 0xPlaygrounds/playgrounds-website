@@ -142,11 +142,10 @@ export const DeepDiveStories = async () => {
       <div className="flex max-w-[1216px] items-center justify-center gap-y-[80px]">
         <div className="flex text-[28px] md:text-[52px] text-center flex-col">
           <div>
-            <span className="italic font-ivypresto">Deep dive</span> into our
-            stories.
+            Notes from the <span className="italic font-ivypresto">team</span>.
           </div>
           <span className="text-[18px] text-[#D4D4D4]">
-            Take a look into the myriad of uses for our platforms.
+            What we&apos;re building, and why.
           </span>
         </div>
       </div>

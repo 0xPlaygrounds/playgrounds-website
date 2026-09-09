@@ -28,13 +28,14 @@ export const ProductAnimation = () => {
             className="flex text-center leading-none flex-col"
             style={{ fontSize: 'clamp(2.5rem, 12vw, 5.625rem)' }}
           >
+            <span>We build tools for</span>
             <span>
-              Open and <span className="font-ivypresto italic">fearless</span>.
+              the <span className="font-ivypresto italic">post-AI</span> age.
             </span>
-            <span>This is AI&apos;s future.</span>
           </div>
           <span className="text-[18px] text-[#D4D4D4]">
-            Redefining how AI is built. Open to all, and fast as ever.
+            A Rust framework for AI agents, a context library for working with
+            AI, and the community around both.
           </span>
         </div>
 

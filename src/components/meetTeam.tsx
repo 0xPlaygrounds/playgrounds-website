@@ -29,24 +29,19 @@ const team: TeamMember[] = [
     image: '/assets/team/mochan.webp',
   },
   {
-    name: 'Tanit',
-    title: 'Marketing Director',
-    image: '/assets/team/natasha.webp',
-  },
-  {
     name: 'Mateusz',
     title: 'Design Engineer',
     image: '/assets/team/mateusz.webp',
   },
   {
-    name: 'Josh',
-    title: 'Project Lead (Rig)',
-    image: '/assets/team/josh.webp',
+    name: 'Stephen',
+    title: 'Project Lead (RIG)',
+    image: '/assets/team/stephen.webp',
   },
   {
     name: 'Fay',
-    title: 'Backend Engineer (Rig)',
-    image: '/assets/team/fay.jpeg',
+    title: 'Backend Engineer',
+    image: '/assets/team/fay.webp',
   },
   {
     name: 'Frank',
@@ -54,8 +49,13 @@ const team: TeamMember[] = [
     image: '/assets/team/frank.webp',
   },
   {
-    name: 'Yavens',
-    title: 'Engineer (intern)',
+    name: 'Kezo',
+    title: 'Growth Lead',
+    image: '/assets/team/kezo.webp',
+  },
+  {
+    name: 'Yav',
+    title: 'Full stack Engineer',
     image: '/assets/team/yavens.webp',
   },
 ];
@@ -74,7 +74,7 @@ const TeamMemberCard = ({
 }: TeamMemberCardProps) => {
   return (
     <div
-      className="relative w-[240px] h-[288px] overflow-hidden rounded-lg group flex-shrink-0 cursor-pointer"
+      className="relative w-full max-w-[192px] aspect-[5/6] overflow-hidden rounded-lg group cursor-pointer justify-self-center"
       onClick={onActivate}
       role="button"
       tabIndex={0}
@@ -88,8 +88,8 @@ const TeamMemberCard = ({
       <Image
         src={image || '/placeholder.svg'}
         alt={name}
-        width={240}
-        height={288}
+        width={480}
+        height={576}
         className={`w-full h-full object-cover filter transition duration-500 ${
           isActive ? 'grayscale-0' : 'grayscale'
         } group-hover:grayscale-0`}
@@ -115,18 +115,17 @@ export const MeetTeam = () => {
     <div className="flex flex-col gap-y-[80px] pt-32 bg-gradient-to-b from-[#0A0A0A] from-65% to-[#16161A]">
       <div className="flex text-[28px] md:text-[52px] text-center flex-col px-4 md:px-[112px]">
         <span>
-          Meet the team behind the{' '}
-          <span className="italic font-ivypresto">magic</span>.
+          The <span className="italic font-ivypresto">team</span>.
         </span>
         <span className="text-[18px] text-[#D4D4D4]">
-          A dedicated team, constantly improving what we have to offer.
+          A small team across engineering, product, and growth.
         </span>
       </div>
       <div className="w-full px-4 md:px-[112px] pb-[112px]">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 justify-items-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-center">
           {team.map((member, i) => (
             <TeamMemberCard
-              key={i}
+              key={member.name}
               title={member.title}
               image={member.image}
               name={member.name}

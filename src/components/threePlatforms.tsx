@@ -17,7 +17,7 @@ export const ThreePlatforms = () => {
       bgImage: '/assets/projects/rig-bg.webp',
       href: buildUtmUrl('https://rig.rs/', 'three_platforms_rig'),
       description:
-        'Open-source Rust LLM framework providing high-performance, modular APIs for building scalable AI applications with type safety and lightning-fast execution.',
+        'Build AI agents in Rust. One typed API across 20+ model providers, with tools, streaming, and RAG built in. MIT licensed.',
     },
     {
       name: 'Arc',
@@ -25,15 +25,16 @@ export const ThreePlatforms = () => {
       bgImage: '/assets/projects/arc-bg.webp',
       href: buildUtmUrl('https://arc.fun/', 'three_platforms_arc'),
       description:
-        'AI Rig Complex - A thriving community ecosystem fostering partnerships, side projects, and collaborative innovation built around the Rig framework.',
+        'AI Rig Complex. The community around Rig: contributors, partners, and the projects people ship with it.',
     },
     {
       name: 'Ryzome',
       logo: '/assets/projects/ryzome-logo.webp',
       bgImage: '/assets/projects/ryzome-bg.webp',
       href: buildUtmUrl('https://ryzome.ai/', 'three_platforms_ryzome'),
+      isNew: true,
       description:
-        'AI-powered workspace platform that transforms how teams collaborate, create, and innovate. The user-facing canvas that brings AI capabilities to everyday workflows.',
+        'Stop repeating yourself to AI. Ryzome keeps your docs, notes, and conversations in one context library and loads what each chat needs.',
     },
   ];
 
@@ -44,13 +45,12 @@ export const ThreePlatforms = () => {
     >
       <div className="flex items-center leading-none text-[28px] md:text-[52px] flex-col text-center justify-center">
         <span>
-          A triad of platforms to{' '}
-          <span className="italic font-ivypresto">elevate</span>
+          Three products. One{' '}
+          <span className="italic font-ivypresto">stack</span>.
         </span>
-        <span>your experience.</span>
       </div>
       <span className="text-[18px] text-[#D4D4D4]">
-        Pick and choose what you want to create.
+        Start at the layer you need. Each one stands on its own.
       </span>
       <div className="max-w-[1216px] flex-col gap-y-6 md:flex-row pt-12 md:pt-16 flex gap-x-4">
         {platforms.map((platform, index) => {
@@ -74,7 +74,14 @@ export const ThreePlatforms = () => {
                   />
                 </div>
               </div>
-              <span className="text-[18px]">{platform.name}</span>
+              <span className="flex items-center gap-x-2 text-[18px]">
+                {platform.name}
+                {platform.isNew && (
+                  <span className="rounded-full border border-[#333333] px-2 py-0.5 text-[11px] uppercase tracking-wide text-[#D4D4D4]">
+                    New
+                  </span>
+                )}
+              </span>
               <span className="text-[#808080]">{platform.description}</span>
             </div>
           );
