@@ -32,6 +32,7 @@ export const ThreePlatforms = () => {
       logo: '/assets/projects/ryzome-logo.webp',
       bgImage: '/assets/projects/ryzome-bg.webp',
       href: buildUtmUrl('https://ryzome.ai/', 'three_platforms_ryzome'),
+      isNew: true,
       description:
         'Stop repeating yourself to AI. Ryzome keeps your docs, notes, and conversations in one context library and loads what each chat needs.',
     },
@@ -73,7 +74,14 @@ export const ThreePlatforms = () => {
                   />
                 </div>
               </div>
-              <span className="text-[18px]">{platform.name}</span>
+              <span className="flex items-center gap-x-2 text-[18px]">
+                {platform.name}
+                {platform.isNew && (
+                  <span className="rounded-full border border-[#333333] px-2 py-0.5 text-[11px] uppercase tracking-wide text-[#D4D4D4]">
+                    New
+                  </span>
+                )}
+              </span>
               <span className="text-[#808080]">{platform.description}</span>
             </div>
           );
