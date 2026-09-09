@@ -28,9 +28,9 @@ export const ProductAnimation = () => {
             className="flex text-center leading-none flex-col"
             style={{ fontSize: 'clamp(2.5rem, 12vw, 5.625rem)' }}
           >
-            <span className="text-balance">
-              We build the AI tools we wanted to{' '}
-              <span className="font-ivypresto italic">use</span>.
+            <span>We build the AI tools</span>
+            <span>
+              we wanted to <span className="font-ivypresto italic">use</span>.
             </span>
           </div>
           <span className="text-[18px] text-[#D4D4D4]">
