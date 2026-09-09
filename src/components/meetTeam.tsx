@@ -74,7 +74,7 @@ const TeamMemberCard = ({
 }: TeamMemberCardProps) => {
   return (
     <div
-      className="relative w-full aspect-[5/6] overflow-hidden rounded-lg group cursor-pointer"
+      className="relative w-full max-w-[192px] aspect-[5/6] overflow-hidden rounded-lg group cursor-pointer justify-self-center"
       onClick={onActivate}
       role="button"
       tabIndex={0}
