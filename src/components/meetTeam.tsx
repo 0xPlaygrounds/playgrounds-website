@@ -29,24 +29,19 @@ const team: TeamMember[] = [
     image: '/assets/team/mochan.webp',
   },
   {
-    name: 'Tanit',
-    title: 'Marketing Director',
-    image: '/assets/team/natasha.webp',
-  },
-  {
     name: 'Mateusz',
     title: 'Design Engineer',
     image: '/assets/team/mateusz.webp',
   },
   {
-    name: 'Josh',
-    title: 'Project Lead (Rig)',
-    image: '/assets/team/josh.webp',
+    name: 'Stephen',
+    title: 'Project Lead (RIG)',
+    image: '/assets/team/stephen.webp',
   },
   {
     name: 'Fay',
-    title: 'Backend Engineer (Rig)',
-    image: '/assets/team/fay.jpeg',
+    title: 'Backend Engineer',
+    image: '/assets/team/fay.webp',
   },
   {
     name: 'Frank',
@@ -54,13 +49,13 @@ const team: TeamMember[] = [
     image: '/assets/team/frank.webp',
   },
   {
-    name: 'Eric',
-    title: 'Growth Manager',
-    image: '/assets/team/eric.jpeg',
+    name: 'Kezo',
+    title: 'Growth Lead',
+    image: '/assets/team/kezo.webp',
   },
   {
-    name: 'Yavens',
-    title: 'Engineer (intern)',
+    name: 'Yav',
+    title: 'Full stack Engineer',
     image: '/assets/team/yavens.webp',
   },
 ];
