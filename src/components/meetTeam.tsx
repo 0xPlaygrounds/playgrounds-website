@@ -74,7 +74,7 @@ const TeamMemberCard = ({
 }: TeamMemberCardProps) => {
   return (
     <div
-      className="relative w-[240px] h-[288px] overflow-hidden rounded-lg group flex-shrink-0 cursor-pointer"
+      className="relative w-full aspect-[5/6] overflow-hidden rounded-lg group cursor-pointer"
       onClick={onActivate}
       role="button"
       tabIndex={0}
@@ -88,8 +88,8 @@ const TeamMemberCard = ({
       <Image
         src={image || '/placeholder.svg'}
         alt={name}
-        width={240}
-        height={288}
+        width={480}
+        height={576}
         className={`w-full h-full object-cover filter transition duration-500 ${
           isActive ? 'grayscale-0' : 'grayscale'
         } group-hover:grayscale-0`}
@@ -123,7 +123,7 @@ export const MeetTeam = () => {
         </span>
       </div>
       <div className="w-full px-4 md:px-[112px] pb-[112px]">
-        <div className="grid grid-cols-[repeat(auto-fill,240px)] gap-4 justify-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-center">
           {team.map((member, i) => (
             <TeamMemberCard
               key={member.name}
