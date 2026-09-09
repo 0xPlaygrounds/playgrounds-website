@@ -115,11 +115,10 @@ export const MeetTeam = () => {
     <div className="flex flex-col gap-y-[80px] pt-32 bg-gradient-to-b from-[#0A0A0A] from-65% to-[#16161A]">
       <div className="flex text-[28px] md:text-[52px] text-center flex-col px-4 md:px-[112px]">
         <span>
-          Meet the team behind the{' '}
-          <span className="italic font-ivypresto">magic</span>.
+          The <span className="italic font-ivypresto">people</span> behind it.
         </span>
         <span className="text-[18px] text-[#D4D4D4]">
-          A dedicated team, constantly improving what we have to offer.
+          A small team across engineering, product, and growth.
         </span>
       </div>
       <div className="w-full px-4 md:px-[112px] pb-[112px]">

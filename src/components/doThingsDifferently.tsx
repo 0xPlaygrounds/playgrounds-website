@@ -6,23 +6,23 @@ import { PlusIcon } from './icons/plusIcon';
 
 const items = [
   {
-    title: 'Democratizing AI for Everyone',
+    title: 'Open source, top to bottom',
     description:
-      "We're on a mission to democratize AI with powerful open-source tools, from low-level frameworks to user-facing apps .",
+      'Rig is MIT licensed with 230+ contributors. From the framework to the app, the code is public. Read it, fork it, ship it.',
     image: '/assets/features/feature0.webp',
     imageWidth: 220,
   },
   {
-    title: 'Do it your way.',
+    title: 'No lock-in',
     description:
-      "We're on a mission to democratize AI with powerful open-source tools, from low-level frameworks to user-facing apps .",
+      'Bring your own models. Rig speaks to 20+ providers behind one interface, so switching is a config change, not a rewrite.',
     image: '/assets/features/feature1.webp',
     imageWidth: 85,
   },
   {
-    title: 'Premium technology, in an easy format.',
+    title: 'Built in Rust, made to be used',
     description:
-      "We're on a mission to democratize AI with powerful open-source tools, from low-level frameworks to user-facing apps .",
+      'Type safety and performance under the hood. A clear API on top. Ship a single binary or compile to WASM.',
     image: '/assets/features/feature2.webp',
     imageWidth: 250,
   },
@@ -47,12 +47,10 @@ export const DoThingsDifferently = () => {
       <div className="flex flex-col max-w-[1216px] w-full items-center justify-center mx-auto">
         <div className="flex flex-col text-[28px] md:text-[52px] items-center text-center">
           <span>
-            We do things a bit{' '}
-            <span className="italic font-ivypresto">differently</span>.
+            How we <span className="italic font-ivypresto">work</span>.
           </span>
           <span className="text-[18px] text-[#D4D4D4] mt-4">
-            Create powerful AI workflows that solve real problems in minutes,
-            not days.
+            Small team. Open source by default. We ship, then we listen.
           </span>
         </div>
       </div>

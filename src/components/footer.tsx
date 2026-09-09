@@ -18,11 +18,11 @@ export const Footer = () => {
                 playgrounds
               </span>
               <span className="w-full flex text-[20px] md:hidden pb-4">
-                Create, combine and take control of Artificial Intelligence
+                Build with AI on your own terms.
               </span>
               <div className="md:flex flex-col hidden leading-none text-[32px]">
-                <span>Create, combine and take control </span>
-                <span>of Artificial Intelligence.</span>
+                <span>Build with AI</span>
+                <span>on your own terms.</span>
               </div>
               <div className="w-1/2 flex md:hidden gap-y-8 flex-col h-full justify-between">
                 <div className="md:hidden flex flex-col gap-y-4">
